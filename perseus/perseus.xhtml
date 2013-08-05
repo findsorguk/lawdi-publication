@@ -11,7 +11,7 @@
             <h2 class="sectionTitle">Overview</h2>
             
             <p>The Perseus Digital Library is currently working towards making all of its data available 
-                according to the best practicied outlined by [<a class="ref" href="#heathbizer2011">Heath and Bizer</a>].</p>
+                according to the best practices outlined by [<a class="ref" href="#heathbizer2011">Heath and Bizer</a>].</p>
             
             <p>We started by thinking carefully about the URIs that we are using to name and address the Perseus texts,
                 catalog metadata, and other data objects from the Perseus Digital Library, so that we could feel reasonably 
@@ -26,7 +26,7 @@
             <p>We decided upon this incremental approach because, given the large volume of resources in the 
                 Perseus Library, and the limited amount of manpower to get the work done, we felt it would 
                 be most beneficial to our own work, and our community of users, to publish our URIs as we go, 
-                and not wait  until delivery of all the underling resources could also be made compliant.</p>
+                and not wait until delivery of all the underling resources could also be made compliant.</p>
             
             
             <h2>URIs in the Perseus Digital Library</h2>
@@ -37,12 +37,12 @@
             
             <p>All Perseus data URIs are published under the <em>http://data.perseus.org</em> URI prefix, followed by 
                 one or more path components indicating the resource type, then a unique identifier for the resources, and
-                and optional path component identifying a specific output format for the resource.</p>
+                an optional path component identifying a specific output format for the resource.</p>
             
             
             <h3>Citations and Texts</h3>
             
-            <p>The Perseus stable URIs for citations and texts leverage Canonical Text Services URNs 
+            <p>The Perseus stable URIs for citations and texts leverage Canonical Text Services (CTS) URNs 
                 [<a class="ref" href="#smithblackwell2012">Blackwell and Smith</a>], enabling us to take advantage 
                 of the CTS data model while still supporting Linked Data standards. </p>
             
@@ -70,7 +70,7 @@
             
             <p>We can append an edition identifier to the above URN to specify
                 the unique resource which is Perseus' TEI XML version of Homer's 
-                Iliad that is identified in the Perseus CTS inventory as 'perseus-grc1'.</p>
+                <em>Iliad</em> that is identified in the Perseus CTS inventory as 'perseus-grc1'.</p>
             
             <blockquote><code>urn:cts:greekLit:tlg0012.tlg001.perseus-grc1</code></blockquote>
             
@@ -131,8 +131,8 @@
                 <a title="Translation URI for The Iliad" href="http://data.perseus.org/catalog/urn:cts:greekLit:tlg0012.tlg001.perseus-eng1"> http://data.perseus.org/catalog/urn:cts:greekLit:tlg0012.tlg001.perseus-eng1</a>
             </blockquote>
             
-            <p>You can explicity link to an ATOM feed, rather than the defaul HTML interface, of the catalog metadata 
-                for a textgroup, work or edition/translationby appending the optional format path to the URI:</p>
+            <p>You can explicity link to an ATOM feed, rather than the default HTML interface, of the catalog metadata 
+                for a textgroup, work or edition/translation by appending the optional format path to the URI:</p>
             
             <blockquote>           
                 <a title="atom feed for The Iliad" href="http://data.perseus.org/catalog/urn:cts:greekLit:tlg0012.tlg001/atom"> http://data.perseus.org/catalog/urn:cts:greekLit:tlg0012.tlg001/atom</a><br/>

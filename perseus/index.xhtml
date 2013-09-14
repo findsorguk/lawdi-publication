@@ -6,9 +6,9 @@
     </head>
     <body>
         <article>
-            <h2 class="articleTitle">Linked Data in the Perseus Digital Library</h2>
+            <h1 class="articleTitle">Linked Data in the Perseus Digital Library</h1>
             <div class="author"><a href="http://www.perseus.tufts.edu/hopper/about/who/bridgetAlmas">Bridget Almas</a></div>
-            <h3 class="sectionTitle">Overview</h3>
+            <h2 class="sectionTitle">Overview</h2>
             
             <p>The Perseus Digital Library is currently working towards making all of its data available 
                 according to the best practices outlined by [<a class="ref" href="#heathbizer2011">Heath and Bizer</a>].</p>
@@ -29,7 +29,7 @@
                 and not wait until delivery of all the underling resources could also be made compliant.</p>
             
             
-            <h3>URIs in the Perseus Digital Library</h3>
+            <h2>URIs in the Perseus Digital Library</h2>
             
             <p>As of this writing, we have released URIs for texts, citations and bibliographic catalog records. Work is 
                 in progress on authors, names and place entities, Greek and Latin lexical entities, and artifacts and
@@ -40,7 +40,7 @@
                 an optional path component identifying a specific output format for the resource.</p>
             
             
-            <h4>Citations and Texts</h4>
+            <h3>Citations and Texts</h3>
             
             <p>The Perseus stable URIs for citations and texts leverage Canonical Text Services (CTS) URNs 
                 [<a class="ref" href="#smithblackwell2012">Blackwell and Smith</a>], enabling us to take advantage 
@@ -59,7 +59,7 @@
             <p>HTML is the only currently supported format for full text URIs, but the XML format will be available 
                 soon.</p>
             
-            <h4>Combining CTS and URI standards</h4>
+            <h3>Combining CTS and URI standards</h3>
             
             <p>By combining the CTS and URI standards we produce semantically meaningful URIs for 
                 texts and citations. This is maybe best illustrated by example.</p>
@@ -151,7 +151,7 @@
                 VoID files for all URIs are forthcoming. 
             </p>
             
-            <h4>HTTP Responses</h4>
+            <h3>HTTP Responses</h3>
             
             <p>The default response for any URI request whose HTTP Headers indicates that the calling client accepts text/html
                 is a redirect, specifying the HTTP 302 response code, to the HTML display for the page for the requested resource in the corresponding Perseus 
@@ -167,14 +167,14 @@
                 implemented, in the future, if a resource <em>not found</em> in the Catalog is requested, we plan to redirect to 
                 an interface through which data for the resource can be submitted for inclusion in the catalog.</p>
 
-            <h3>Resource Contents</h3>
+            <h4>Resource Contents</h4>
             
             <p>As mentioned previously, currently the resources served at the Perseus URIs do not advertise any linked/linkable
             data contained within them via RDF. This is essential for full compliance to linked data best practices and is
             on our roadmap for future releases of the Perseus interfaces to the data.</p>
                 
             <footer id="worksCited">
-                <h4>Works Cited</h4>
+                <h3>Works Cited</h3>
                 <ul>
                 <li class="bibl">
                     <span id="heathbizer2011" class="ref">Tom Heath and Christian Bizer (2011)</span> 

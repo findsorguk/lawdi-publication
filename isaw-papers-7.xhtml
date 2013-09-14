@@ -22,6 +22,19 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
  <title>Current Practice in Linked Open Data for the Ancient World</title>
  <link rel="stylesheet" href="isaw-papers.css" />
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"/><script src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js" type="text/javascript"/><script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"/><script type="text/javascript">
+  function show_id_links() {
+if ($('.id_link').css('display') == "none")
+$('.id_link').show();
+else
+$('.id_link').hide();
+}
+
+  function show_references() {
+ $('.reference').css('border-bottom','thin dotted gray');
+ 
+ }
+   </script>
 </head>
 <body>
  
@@ -39,7 +52,7 @@
    <ul>
     <li><a href="#section1">Introduction</a></li>
     <li><a href="">Library LOD (Acheson)</a></li>
-    <li><a href="">Perseus (Almas)</a></li>
+    <li><a href="perseus">Perseus (Almas)</a></li>
     <li><a href="">Herculaneum Graffiti Project (Benefiel)</a></li>
     <li><a href="">Homer Multitext (Blackwell)</a></li>
     <li><a href="">Papyri.info (Cayless)</a></li>
@@ -47,26 +60,26 @@
     <li><a href="">Ur (Hafford)</a></li>
     <li><a href="">Library LOD (Harper)</a></li>
     <li><a href="">ISAW Papers (Heath)</a></li>
-    <li><a href="">AWMC (Horne)</a></li>
+    <li><a href="">Ancient World Mapping Center (Horne)</a></li>
     <li><a href="">Geo (Isaksen)</a></li>
     <li><a href="">AWOL (Jones)</a></li>
     <li><a href="">Open Context (Kansa)</a></li>
-    <li><a href="">Latin Lit/Geo (Lana)</a></li>
+    <li><a href="geolat"> Geolat: Geography for Latin Literature (Lana)</a></li>
     <li><a href="">Ancient Wisdom (Lawrence)</a></li>
     <li><a href="">EAGLE (Liuzzo)</a></li>
     <li><a href="">BMCR (MacKay)</a></li>
     <li><a href="">Byz Capp (McMichael)</a></li>
-    <li><a href="">(Meyers)</a></li>
+    <li><a href="meyers">Exploring an Opportunity to Link the Dead in Ancient Rome (Meyers)</a></li>
     <li><a href="">Syriaca.org (Michelson)</a></li>
     <li><a href="">Inscriptions of Israel/Palestine (Mylonas)</a></li>
     <li><a href="">Berkeley Prosopography Services (Pearce)</a></li>
     <li><a href="">PAS (Pett)</a></li>
-    <li><a href="">#PBMP (Poehler)</a></li>
+    <li><a href="">Pompeii Bibliography and Mapping Resource (Poehler)</a></li>
     <li><a href="">It's about time (Rabinowitz)</a></li>
     <li><a href="">Egypt (Razanajao)</a></li>
     <li><a href="">ASCSA Publications (Reinhard)</a></li>
     <li><a href="">Citation (Romanello)</a></li>
-    <li><a href="">Integrating Historical-Geographic Web-Resources (Tsonev)</a></li>
+    <li><a href="tsonev">Integrating Historical-Geographic Web-Resources (Tsonev)</a></li>
     <li><a href="">Library LOD (Van Keer)</a></li>
     <li><a href="">Penn Museum (Williams)</a></li>
    </ul>
@@ -78,6 +91,13 @@
  <div class="section" id="section1">
  <h2>Introduction</h2>
  </div>
+</div>
+<div id="body">
+<section id="perseus"/>
+<section id="geolat"/>
+<section id="meyers"/>
+<section id="pmbr"/>
+<section id="tsonev"/>
 </div>
 <div id="back">
 <div class="editorial_note"><i>ISAW Papers</i> (ISSN 2164-1471)  is a publication of the <a rel="dcterms:publisher" property="dcterms:publisher" href="http://isaw.nyu.edu">Institute for the Study of the Ancient World</a>, <a href="http://nyu.edu/">New York University</a>. This article was submitted for publication by Sebastian Heath as a member of the faculty.</div>

@@ -6,9 +6,9 @@
     </head>
     <body>
         <article>
-            <h1 class="articleTitle">Linked Data in the Perseus Digital Library</h1>
+            <h2 class="articleTitle">Linked Data in the Perseus Digital Library</h2>
             <div class="author"><a href="http://www.perseus.tufts.edu/hopper/about/who/bridgetAlmas">Bridget Almas</a></div>
-            <h2 class="sectionTitle">Overview</h2>
+            <h3 class="sectionTitle">Overview</h3>
             
             <p>The Perseus Digital Library is currently working towards making all of its data available 
                 according to the best practices outlined by [<a class="ref" href="#heathbizer2011">Heath and Bizer</a>].</p>
@@ -29,7 +29,7 @@
                 and not wait until delivery of all the underling resources could also be made compliant.</p>
             
             
-            <h2>URIs in the Perseus Digital Library</h2>
+            <h3>URIs in the Perseus Digital Library</h3>
             
             <p>As of this writing, we have released URIs for texts, citations and bibliographic catalog records. Work is 
                 in progress on authors, names and place entities, Greek and Latin lexical entities, and artifacts and
@@ -40,7 +40,7 @@
                 an optional path component identifying a specific output format for the resource.</p>
             
             
-            <h3>Citations and Texts</h3>
+            <h4>Citations and Texts</h4>
             
             <p>The Perseus stable URIs for citations and texts leverage Canonical Text Services (CTS) URNs 
                 [<a class="ref" href="#smithblackwell2012">Blackwell and Smith</a>], enabling us to take advantage 
@@ -108,7 +108,7 @@
             
             <blockquote><a href="http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg001.perseus-grc1:1.100/xml">http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg001.perseus-grc1:1.100/xml</a></blockquote>        
                         
-            <h3>Catalog Records</h3>
+            <h4>Catalog Records</h4>
             
             We currently publish URIs for work and edition/translation level records, as well as the CTS textgroup. URIs for authors, editors and
             translators are forthcoming. We leverage the CTS URNs for the texts in the catalog record URIs. The 
@@ -140,7 +140,7 @@
             
             <p>Support for alternate formats of RDF and JSON for catalog records is forthcoming.</p>
             
-            <h3>Publication</h3>
+            <h4>Publication</h4>
             
             <p>The URIs themselves are currently published in the user interfaces of the Perseus Digital Library.
                 For texts and citations, they are included in the <em>"Data Identifiers"</em> widget which appears on 
@@ -151,7 +151,7 @@
                 VoID files for all URIs are forthcoming. 
             </p>
             
-            <h3>HTTP Responses</h3>
+            <h4>HTTP Responses</h4>
             
             <p>The default response for any URI request whose HTTP Headers indicates that the calling client accepts text/html
                 is a redirect, specifying the HTTP 302 response code, to the HTML display for the page for the requested resource in the corresponding Perseus 
@@ -167,14 +167,14 @@
                 implemented, in the future, if a resource <em>not found</em> in the Catalog is requested, we plan to redirect to 
                 an interface through which data for the resource can be submitted for inclusion in the catalog.</p>
 
-            <h2>Resource Contents</h2>
+            <h3>Resource Contents</h3>
             
             <p>As mentioned previously, currently the resources served at the Perseus URIs do not advertise any linked/linkable
             data contained within them via RDF. This is essential for full compliance to linked data best practices and is
             on our roadmap for future releases of the Perseus interfaces to the data.</p>
                 
             <footer id="worksCited">
-                <h3>Works Cited</h3>
+                <h4>Works Cited</h4>
                 <ul>
                 <li class="bibl">
                     <span id="heathbizer2011" class="ref">Tom Heath and Christian Bizer (2011)</span> 

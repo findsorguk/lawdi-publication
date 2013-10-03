@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:batlas="http://atlantides.org/batlas/"
+      xmlns:gml="http://www.opengis.net/gml/"
+      xmlns:nm="http://nomisma.org/id/"
+      xmlns:ov="http://open.vocab.org/terms/"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:skos="http://www.w3.org/2008/05/skos#"
+      xmlns:google="http://rdf.data-vocabulary.org/#"
+      xmlns:con="http://www.w3.org/2000/10/swap/pim/contact#"
+      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"
+      xmlns:dct="http://dublincore.org/documents/dcmi-terms/"
+      xml:lang="en">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Language" content="en-GB"/>
+        <meta property="og:title" content="Welcome to the Portable Antiquities Scheme website"/>
+
+        <title>Linking Portable Antiquities to a wider web</title>
+
+        <link rel="stylesheet" href="../isaw-papers.css" />
+    </head>
+    <body>
+        <h1>Linking Portable Antiquities to a wider web</h1>
+        <p>This text is released under a <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 license</a>.</p>
+        <p>Daniel E.J. Pett, ICT Advisor, Department of Portable Antiquities and Treasure, The British Museum, Great Russell Street, London, WC1B 3DG. Email: <a href="mailto:dpett@britishmuseum.org">dpett@britishmuseum.org</a></p>
+
+        <div id="abstract"><em>Abstract:</em> This paper will discuss the impact that the two LAWDI events had on the digital work and output of the United Kingdom's Portable Antiquities Scheme, based at the British Museum, London.  </div>
+
+        <div id="subjects"><em>Subjects:</em> <a rel="dcterms:subject" href="http://id.loc.gov/authorities/subjects/sh86001448">Humanities--Study and teaching</a>, <a rel="dcterms:subject" href="http://id.loc.gov/authorities/subjects/sh86001448">Archaeology</a></div>
+
+        <p>The Portable Antiquities Scheme (hereafter the <abbr title="Portable Antiquities Scheme">PAS</abbr>) was one of the few projects to attend the <abbr title="Linked Ancient World Data Institute">LAWDI</abbr> events, which did not truly fall under the Classical World umbrella that neatly encompassed many of the other attending projects.  The <abbr title="Portable Antiquities Scheme">PAS</abbr> is a government funded project in the United Kingdom, which promotes the voluntary recording of archaeological objects found by members of the public in England and Wales and administers the Treasure Act process. These objects that are recorded on the <a href="http://finds.org.uk">PAS database</a> range from the Prehistoric to Post-Medieval periods (as defined in the <abbr title="the United Kingdom">UK</abbr> by English Heritage) with a large corpus of material that can be attributed to the Roman Empire, of which the majority are coins. Indeed, numismatic material provides the greatest opportunity for the Scheme to link to other resources (or URIs) through their regular attributes such as the mint (geography), era (time), issuer or moneyer (people), place of discovery (geography) and so on.</p>
+
+        <p>Since 2003 (Pett 2010a) these data have been placed online within a dynamic database that is updated in real-time, and over 900,000 objects have been recorded with images and extensive metadata (over 200 possible fields, many using controlled and agreed vocabularies) being collected for each. These metadata present an exciting and very practical opportunity for implementing linked data techniques, collaborating with many of the attending projects, and this paper will briefly touch on this.
+            The majority of attending projects were beginning their adventure into the world of Linked and Open Data (<abbr title="Linked Open Data">LOD</abbr>) and many could provide data that the <abbr title="Portable Antiquities Scheme">PAS</abbr> software could and can consume and use for enrichment of its own website (Pett 2010b, Gruber et al. 2012). In turn these linkages can be tied to external resources such as Virtual Identity Authorities Files (<abbr title="Virtual Identity Authorities Files">VIAF</abbr>) or dbPedia or as Kansa (2013) showed in his excellent presentations, to projects such as the Encyclopaedia of Life (http://eol.org.)</p>
+
+        <h2>Pre LAWDI – where did the <abbr title="Portable Antiquities Scheme">PAS</abbr> website stand?</h2>
+
+        <p>The <abbr title="Portable Antiquities Scheme">PAS</abbr> software is written entirely by the paper’s author (all source code available at https://github.com/findsorguk), and builds on the original content management system that was provided by Oxford ArchDigital before their liquidation in 2007 (Pett 2010a). (Like Kansa's superb OpenContext, choices of technology and implementation are very similar: PHP, Solr etc). From this period onwards, the author began to explore best practices for web implementation and early on in the development of the site (Pett 2012); a decision was made to begin the journey towards what was to become Berners-Lee’s 5 stars of linked data (see Berners-Lee 2006 and Hausenblas 2010) with the implementation of cool URIs (W3C 2008) which attempted to describe the resource that the consumer would find; for example: http://finds.org.uk/romancoins/personifications/named/as/Apollo which leads to details of the page within the Roman coin guide describing the depiction of the personification of Apollo.  Data driven pages within the site could be obtained in various representations - for example as JSON, XML, CSV or KML – but content negotiation was still lacking and is at the present time as the author has not managed to find time to implement this. The lack of finds.org.uk serving up data with content negotiation has been highlighted by Light (2011) and is something that does need resolving.</p>
+
+        <p>Within the site templates structured data has been used for example microformats (see http://microformats.org/ for more information – these are now 7 years old as a concept) and rdfa (see http://www.w3.org/TR/xhtml-rdfa-primer/) were used extensively. For example within HTML contact templates, FOAF standards were implemented. This can be shown in Google’s webmaster tools structured data section in figure 1 below:</p>
+
+        <div>
+            <img src="images/structured.png" width="" height="" alt=""/>
+            <p>Figure 1: An example of structured data from the author’s profile page as seen by Google’s webmaster tools.</p>
+        </div>
+
+        <h2>Post LAWDI 2012</h2>
+
+        <p>After the 2012 event at ISAW, efforts were made to bring the <abbr title="Portable Antiquities Scheme">PAS</abbr> into the Pelagios family (http://pelagios-project.blogspot.co.uk/). This was quite a simple task to expedite with expert advice available online (https://github.com/pelagios/pelagios-cookbook/wiki) and the <abbr title="Portable Antiquities Scheme">PAS</abbr> database already using Pleiades identifiers within its schema. A weekly compiled dump of the ever changing <abbr title="Portable Antiquities Scheme">PAS</abbr> data that had Pleiades IDs (Pett, 2012b) was produced and this was integrated into the Pelagios ecosystem (at present over 80,000 Roman coins records on the <abbr title="Portable Antiquities Scheme">PAS</abbr> database have attributions to Roman mints which have been aligned with Pleiades identifiers, leaving around 90,000 unattributed.) These data were used to great effect in Cayless’ data explorer visualisation that was unveiled to the world at large at LAWDI-2013 (Cayless 2013) with Rome being our highest attribution.</p>
+
+        <p>In the spirit of collaboration and as a mutual benefit, the <abbr title="Portable Antiquities Scheme">PAS</abbr> also hosted a mirror tile store of the maps that Johan Åhfeldt (2012) created and these are available for anyone to use, with the <abbr title="Portable Antiquities Scheme">PAS</abbr> picking up the associated bandwidth costs (Pett 2012d). Further integration with LAWDI resources included the use of the Pelagios widget, Nomisma and Pleiades identifiers and the ISAW javascript library.</p>
+
+        <p>Attempts were also made to implement more structured data within HTML templates, for example the use of Schema.org and Facebook’s Open Graph metadata tags. A good example of structured data in action can be seen through the author’s implementation of Twitter cards (Pett 2012), a pretty simple process where meta-tags are added to the head section of an HTML document and this allows the Twitter user-interfaces to parse a concise preview of your content (figure 2 below demonstrates this for the Roman cavalry helmet found with an Iron Age hoard in Leicestershire – <abbr title="Portable Antiquities Scheme">PAS</abbr> record PAS-984616 http://finds.org.uk/database/artefacts/record/id/509553 - Leins &amp; Hill (2012).</p>
+
+        <!-- Start of figure 2 -->
+        <div>
+            <img src="images/twitterCard.png" width="" height="" alt=""/>
+            <p>Figure 2: An example of a Twitter card, produced via the parsing of metadata tags applied within mark-up on finds.org.uk templates.</p>
+        </div>
+        <!-- End of figure 2 -->
+
+        <p>Concerted efforts were also made to try and bring the authority lists used for recording coins to external authority lists, and to achieve this, the author used OpenRefine to reconcile terms against VIAF (see Page 2013 for details on how to do this) and dbPedia. Some of the results of this can be seen in Elliot’s "About Roman Emperors" project (http://www.paregorios.org/resources/roman-emperors/) and also within the templates used in the <abbr title="Portable Antiquities Scheme">PAS</abbr> website numismatic guides and this process of enhancement is ongoing.</p>
+
+        <h2>Post LAWDI 2013 – production and consumption of linked data.</h2>
+
+        <p>Following the 2013 event at Drew University, the author began to embark on further development of the LOD capabilities of the <abbr title="Portable Antiquities Scheme">PAS</abbr> website (Pett 2013). A decision was made to integrate with resources provided by English Heritage, the Ordnance Survey, Nomisma, VIAF, dbPedia and the British Museum in a more regimented fashion throughout the records of objects held within the database.</p>
+
+        <h3>Production of linked data via the PAS website</h3>
+
+        <p>RDF is now produced by using XSLT on XML returned from the SOLR indexes that drive the search engine that power <abbr title="Portable Antiquities Scheme">PAS</abbr> pages and this RDF would attempt to be modelled in the same manner as the British Museum’s representation (http://www.researchspace.org and http://www.cidoc-crm.org/) of the CIDOC-CRM model (also building on previous work conducted by the University of Vienna as part of the European funded BRICKS project (Nussbaumer and Haslhofer, 2007: 7–18) but with links out to the resources described above. Through personal correspondence, and face to face meetings with the Research Space project team and via detailed consultation of their draft mapping document (Oldman et al 2013), an attempted modelling has been produced (yet to be documented). The author has changed/ignored some aspects and adopted the nested RDFXML that has been used by the Claros project (http://www.clarosnet.org) at Oxford University and also linked to external resources (something that the British Museum implementation does not do yet.)</p>
+
+        <p>Integration with the British Museum thesauri was reasonably complicated, but was managed through querying their development endpoint and exporting results as CSV. The resulting tables are now available on GitHub (https://github.com/findsorguk/bmThesauri) and these were imported into our MySQL database for querying and joining with our existing thesauri. The same process was implemented on the English Heritage Seneschal endpoint to obtain their URI structures, and these were also imported and linked to the <abbr title="Portable Antiquities Scheme">PAS</abbr> schema. These identifiers can then be compiled within the RDF that is ultimately produced from the <abbr title="Portable Antiquities Scheme">PAS</abbr> site, alongside the already integrated Nomisma and Pleiades identifiers. Linking to these mentioned resources provides a rich foundation on which to build either within the confines of the <abbr title="Portable Antiquities Scheme">PAS</abbr> website or on third party sites.</p>
+
+        <p>As the <abbr title="Portable Antiquities Scheme">PAS</abbr> database is updated in real-time, there are multiple changes daily to the dataset and our RDF is regenerated nightly through a scheduled cronjob calling a script that transforms the SOLR XML and saves it to our server (http://finds.org.uk/rdf/ provides a list of available files as {date}.rdf or pelagios-{date}.rdf) and also to Amazon S3 for archiving purposes (15 days saved on an incremental basis.)</p>
+
+        <h3>Consumption of linked data within the <abbr title="Portable Antiquities Scheme">PAS</abbr> website</h3>
+
+        <p>With the integration of external identifiers into the <abbr title="Portable Antiquities Scheme">PAS</abbr> database schema, the enrichment of resources can be much improved. Prior to LAWDI-2012, the author had integrated data from various resources, usually via the use of Applications Programming Interfaces (APIs), but sometimes via consumption of RDF data. This was achieved by the use of the ARC2 library (Nowak 2011), but this has now been superseded by using the EasyRDF PHP library (Humfrey 2012) and has led to a wider consumption of RDF throughout the site. It is now possible to extract more data for the enrichment of our issuer and ruler biographical pages, for example Augustus (http://finds.org.uk/romancoins/emperors/emperor/id/1), where via the use of identifiers drawn  from Nomisma, the British Museum and dbPedia an aggregated biographical page can be produced and presented with dynamic data drawn directly from the <abbr title="Portable Antiquities Scheme">PAS</abbr> database. This principle has also been applied to the coin guides for other periods of British history, with the same enriching effect. Extra information can be gleaned from the structured data returned from dbPedia, with information relating to parents, titles, battle commands and wives readily available. The return on investment and time spent tying these identifiers to our vocabulary and authority lists is therefore apparent! Other examples are also easy to find within the <abbr title="Portable Antiquities Scheme">PAS</abbr> website, for instance, by combining Pleiades and Nomisma identifiers, enriched pages relating to Roman mints can be produced, (for example, see Rome http://finds.org.uk/romancoins/mints/mint/id/180) with images obtained from Flickr when they have been machine tagged appropriately (see Gillies 2012.) Data can also be consumed from the excellent Pelagios project, as shown below in figure 3:</p>
+
+        <!-- Start of figure 3 -->
+        <div>
+            <img src="images/pelagios.png" width="" height="" alt=""/>
+            <p>Figure 3: Data from Pleiades and Pelagios, used to enrich the mint page for Aquileia, Italy. By integrating this data, the <abbr title="Portable Antiquities Scheme">PAS</abbr> enables further resource discovery and collaboration.</p>
+        </div>
+        <!-- End of figure 2 -->
+
+        <p>One caveat that the <abbr title="Portable Antiquities Scheme">PAS</abbr> website has shown to ingesting these data is the reliance on uptime of the other resources – dbPedia is frequently slow or down and this can have, and Pleiades has a period of instability which have significant impact on enriched resources.</p>
+
+        <h2>Where does the road lead now?</h2>
+        <p>Following on from LAWDI 2012 and 2013, it is intended to develop the LOD capabilities of the <abbr title="Portable Antiquities Scheme">PAS</abbr> further. Work is presently underway to enable a SPARQL endpoint to a self-hosted triple store through a choice of software currently being evaluated: Apache Marmotta and Fuseki (which has been used to good effect by Gruber (2013)) which is hoped will allow <abbr title="Portable Antiquities Scheme">PAS</abbr> data to be used in more applications within the LAWDI family. Beyond this initial audience, there is also the possibility of feeding into the Mellon funded Research Space initiative and to provide data for other LOD projects.</p>
+        <p>It is also hoped that it will be possible to modify the Zend Framework based <abbr title="Portable Antiquities Scheme">PAS</abbr> system to allow for full content negotiation and ideally, removal of the ‘Share-Alike’ Creative Commons licence and replacement with a simple CC-BY version Work will also continue to increase the amount of structured data available via the xhtml+rdfa pages of the website and database and further resources to link to will be sought out and partnerships forged. With good fortune and some extra human resources in the offing, it is hoped that the <abbr title="Portable Antiquities Scheme">PAS</abbr> might reach the 5 stars level by quarter one of 2014. Funding has been forthcoming from the Arts and Humanites Research Council (<abbr title="Arts and Humanities Research Council">AHRC</abbr>) for two projects that will deal with the production and consumption of linked data - one crowd sourcing project with <abbr title="University College London">UCL</abbr> (£318,000) and a visualisation project with Tracemedia (£5,000). The results of these will be forthcoming within 2014.</p>
+
+        <h2>Bibliography</h2>
+
+        <ul>
+            <li>Åhfeldt, J. [2012] <em>"A digital map of the Roman Empire"</em> Available at: <a href="http://pelagios-project.blogspot.co.uk/2012/09/a-digital-map-of-roman-empire.html">http://pelagios-project.blogspot.co.uk/2012/09/a-digital-map-of-roman-empire.html</a> (accessed 27<sup>th</sup> September 2013.)</li>
+            <li>Berners-Lee,T. [2006] <em>"Linked Data"</em> Available at: <a href="http://www.w3.org/DesignIssues/LinkedData.html">http://www.w3.org/DesignIssues/LinkedData.html</a>  (accessed 19<sup>th</sup> September 2013.)</li>
+            <li>Gruber, E. [2013] <em>"New and Improved Nomisma.org Released"</em> Available at: <a href="http://numishare.blogspot.co.uk/2013/07/new-and-improved-nomismaorg-released.html">http://numishare.blogspot.co.uk/2013/07/new-and-improved-nomismaorg-released.html</a> (acccesed 29<sup>th</sup> September 2013)</li>
+            <li>Gruber, E., Heath, S. Meadows, A., Pett, D, Tolle, K. and Wigg-Wolf, D. [2012] <em>"Semantic Web Technologies Applied to Numismatic Collections"</em> in <em>"CAA2012 Proceedings of the 40th Conference in Computer Applications and Quantitative Methods in Archaeology, Southampton, United Kingdom, 26-30 March 2012"</em></li>
+            <li>Hausenblas, M. [2010] <em>"5 Star Open Data."</em> Available at: <a href="http://5stardata.info/">http://5stardata.info/</a> (accessed 19<sup>th</sup> September 2013.)</li>
+            <li>Humfrey, N. [2012] <em>"EasyRDF php library"</em> Available at: <a href="https://github.com/njh/easyrdf">https://github.com/njh/easyrdf</a> (accessed 27<sup>th</sup> September 2013.)</li>
+            <li>Kansa, E. [2013] <em>"A publication approach to linked data in archaeology"</em> Available at <a href="http://www.slideshare.net/ekansa/lawdi-open-context-publishing-linked-data-in-archaeology">http://www.slideshare.net/ekansa/lawdi-open-context-publishing-linked-data-in-archaeology (accessed 20th September 2013</a> (accessed 27<sup>th</sup> September 2013.)</li>
+            <li>Leins, I. &amp; Hill, J.D. [2012] <em>"The Iron Age hoard from Hallaton"</em> Available at: <a href="http://finds.org.uk/database/artefacts/record/id/509553">http://finds.org.uk/database/artefacts/record/id/509553</a> (accessed 27th September 2013.)</li>
+            <li>Light, R. [2011] <em>"Using the PAS REST framework"</em> Available at <a href="http://light.demon.co.uk/wordpress/?p=26">http://light.demon.co.uk/wordpress/?p=26</a> (accessed 27<sup>th</sup> September 2013.)</li>
+            <li>Nowack, B. [2011] <em>"ARC RDF Classes for PHP"</em> Available at <a href="https://github.com/semsol/arc2">https://github.com/semsol/arc2</a> (accessed 27<sup>th</sup> September 2013.)</li>
+            <li>Nussbaumer, P. &amp; Haslhofer, B. [2007] <em>"Putting the CIDOC CRM into Practice - Experiences and Challenges Vienna"</em> University of Vienna. Also available at: <a href="http://eprints.cs.univie.ac.at/404/1/covered.pdf">http://eprints.cs.univie.ac.at/404/1/covered.pdf</a> (accessed 19<sup>th</sup> September 2013.)</li>
+            <li>Oldman, D., Mahmud, J. and Alexiev, V. [2013] <em>"The Conceptual Reference Model Revealed: Quality contextual data for research and engagement: A British Museum case study"</em> (Internal. Discussion document version 0.98 (Unpublished: the latest version is available on request from <a href="mailto:doldman@britishmuseum.org" title="Email Dominic">Dominic Oldman</a>).</li>
+            <li>Page, R.D.M. [2013] <em>"Reconciling author names using Open Refine and VIAF"</em> Available at: http://iphylo.blogspot.co.uk/2013/04/reconciling-author-names-using-open.html (accessed 23<sup>rd</sup> September 2013.)</li>
+            <li>Pett, D. E. J. [2010a] <em>"The Portable Antiquities Scheme’s Database: its development for research since 1998."</em> In A Decade of Discovery: Proceedings of the Portable Antiquities Scheme Conference 2007, Worrell, S,, Egan, G., Leahy, K., Naylor, J., &amp; Lewis M. (eds.) pp 1-18. London: David Brown Book Company.</li>
+            <li>Pett, D.E.J. [2010b] <em>"Distributing the Wealth: Digital knowledge transfer for Numismatics."</em> in <em>"The British Museum and the Future of Numismatics"</em> edited by Cook, B. (pp 71-80) London: British Museum Press. Available at: <a href="http://www.academia.edu/2259658/Distributing_the_wealth">http://www.academia.edu/2259658/Distributing_the_wealth</a> (accessed 27<sup>th</sup> September 2013.)</li>
+            <li>Pett, D.E.J. [2012a] <em>"Linked Portable Antiquities Data for #LAWDI"</em> Available at: <a href="http://www.slideshare.net/dejp3/presentation-for-linked-ancient-world-data-institute">http://www.slideshare.net/dejp3/presentation-for-linked-ancient-world-data-institute</a> (accessed 23<sup>rd</sup> September 2013.)</li>
+            <li>Pett, D.E.J. [2012b] <em>"The Portable Antiquities Scheme joins Pelagios"</em> Available at: <a href="http://pelagios-project.blogspot.co.uk/2012/10/the-portable-antiquities-scheme-joins.html">http://pelagios-project.blogspot.co.uk/2012/10/the-portable-antiquities-scheme-joins.html</a> (accessed 23<sup>rd</sup> September 2013.)</li>
+            <li>Pett, D.E.J. [2012c] <em>"Implementing Twitter Cards with Zend Framework"</em> Available at:</li>
+            <li>Pett, D.E.J. [2012d] <em>"Using the Imperium map layer from the Scheme server for Google maps"</em> Available at: http://finds.org.uk/blogs/blog/2012/11/27/using-the-imperium-map-layer-from-the-scheme-server-for-google-maps/ (accessed 23rd September 2013.)</li>
+            <li>Pett, D.E.J. [2013] <em>"#LAWDI: or how I learned to stop worrying and love linked data. [2012 – 2013]"</em> Available at: <a href="http://bit.ly/lawdiPett2013">http://bit.ly/lawdiPett2013</a> (accessed 23<sup>rd</sup> September 2013).</li>
+            <li>Sauermann, L. and R. Cyganiak (eds.). 2008. "Cool URIs for the Semantic Web." Available at: http:// www.w3.org/TR/cooluris/ Accessed 25 June 2012.</li>
+        </ul>
+
+        <h3>Websites cited in this article</h3>
+        <ul>
+            <li>The Portable Antiquities Scheme: http://finds.org.uk</li>
+            <li>The British Museum open data project: http://collection.britishmuseum.org</li>
+            <li>Pleiades: http://pleiades.stoa.org</li>
+            <li>The Ordnance Survey open data project: http://data.ordnancesurvey.co.uk</li>
+            <li>English Heritage thesauri in linked data format http://www.heritagedata.org/blog/about-heritage-data/seneschal/</li>
+            <li>ARC2 rdf library available at: https://github.com/semsol/arc2 (accessed 27th September 2013)</li>
+        </ul>
+<p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="http://i.creativecommons.org/p/zero/1.0/80x15.png" style="border-style: none;" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law,
+  <a rel="dct:publisher"
+     href="http://finds.org.uk">
+    <span property="dct:title">Daniel Pett</span></a>
+  has waived all copyright and related or neighboring rights to
+  <span property="dct:title">Linking Portable Antiquities to a wider web</span>.
+This work is published from:
+<span property="vcard:Country" datatype="dct:ISO3166"
+      content="GB" about="http://finds.org.uk">
+  United Kingdom</span>.
+</p>
+    </body>
+</html>

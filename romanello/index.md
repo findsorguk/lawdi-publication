@@ -28,7 +28,7 @@ In fact, my approach to citation extraction (see Fig. 2, no. 1 and 2) is essenti
 
 <img src="extraction_steps.png" width="90%" />
 
-	Once captured, citations need to be disambiguated: this is done by assigning to each citation its corresponding CTS URN [@hmt-doku-ctsurns]. CTS URNs are a kind of identifiers that follow the Uniform Resource Name standard and were developed in the framework of the Multitext Homer project as part of the CITE architecture and were designed to become the equivalent of canonical citations in a digital environment, in the sense that they allow one to "identify and retrieve digital representations of texts" [ref, @HMT-doku][^1]. What this means in practice is that the citation "Hell. 3.3.1-4" of the example showed in Fig. 1 (no. 3) is mapped to its corresponding URN, namely `urn:cts:greekLit:tlg0032.tlg001:3.3.1-3.3.4`.
+	Once captured, citations need to be disambiguated: this is done by assigning to each citation its corresponding CTS URN [@hmt-doku-ctsurns]. CTS URNs are a kind of identifiers that follow the Uniform Resource Name standard and were developed in the framework of the Multitext Homer project as part of the CITE architecture and were designed to become the equivalent of canonical citations in a digital environment, in the sense that they allow one to "identify and retrieve digital representations of texts" [ref, @HMT-doku][^1]. What this means in practice is that the citation "Hell. 3.3.1-4" of the example showed in Fig. 2 (no. 3) is mapped to its corresponding URN, namely `urn:cts:greekLit:tlg0032.tlg001:3.3.1-3.3.4`.
 
 [^1]: To date one of the main adopters of this technology is the Perseus project that has built on top of it to provide several functionalities of its digital library and catalog [internal ref?].
 
@@ -76,7 +76,7 @@ The content in the knowledge base is structured mostly using a combination of CI
 	    rdfs:label "Thuc.";
 	    ecrm:P2_has_type <http://data.mr56k.info/type_abbreviation> .
 	
-As showed in Fig. 2 our record is linked to the one contained in the Perseus Catalog; the CTS URN associated to the work as well as the abbreviations of its title are explicitly modelled by using respectively the CIDOC-CRM classes `E42_Identifier` and  `E41_Appellation`. <!-- say that the Perseus Catalog URIs do not currently provide an RDF presentation but this will happen in the next release -->
+As showed in Fig. 3 our record is linked to the one contained in the Perseus Catalog; the CTS URN associated to the work as well as the abbreviations of its title are explicitly modelled by using respectively the CIDOC-CRM classes `E42_Identifier` and  `E41_Appellation`. <!-- say that the Perseus Catalog URIs do not currently provide an RDF presentation but this will happen in the next release -->
 
 [^2]: The Erlangen OWL implementations of both CIDOC-CRM and FRBRoo were used: they are available respectively at <http://erlangen-crm.org/> and <http://erlangen-crm.org/efrbroo>. 
 
@@ -89,7 +89,7 @@ Not only are canonical citations important because of their function, they are a
 
 If we accept that canonical citations are already a way of linking objects--namely the citing and the cited texts--extracting them means then to reconstruct and make explicit such links that already exist, in some form, in the text. The act of transforming citations into hyperlinks, however, may lead to a misrepresentation of their nature and specifically of their being designed to be interoperable: a canonical citation should not be tight to the referred passage in a specific edition, but should rather work as a resolvable pointer, that can be resolved to a given portion of text in any (available) edition or translation. 
 
-Let us now look at an example of how the extracted citations are being stored and published online as Linked Open Data [@Heath2011]. By following an approach that was largely inspired by the Pelagios Project[^pelagios], extracted canonical citations are represented as annotations as defined by the Open Annotation Data Model[^oac] (see Fig. 3). 
+Let us now look at an example of how the extracted citations are being stored and published online as Linked Open Data [@Heath2011]. By following an approach that was largely inspired by the Pelagios Project[^pelagios], extracted canonical citations are represented as annotations as defined by the Open Annotation Data Model[^oac] (see Fig. 4). 
 
 [^pelagios]: Pelagios: Enable Linked Ancient Geodata In Open Systems, http://pelagios-project.blogspot.com. 
 [^oac]: Open Annotation Data Model, http://www.openannotation.org/spec/core/.

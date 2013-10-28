@@ -2,7 +2,7 @@
 
 ## [Matteo Romanello]()
 
-Canonical citations are the standard way of citing primary sources (i.e. the ancient texts) in Classics: the ability to read them, that is knowing what the various abbreviations--very often ambiguous and at times even cryptic--that normally appear in such citations stand for is part of the early training of any classicist. However, having an expert system to capture automatically these citations and their meaning is one of the aims of the project of which the research presented in this paper is part: this issue has been long known [@crane_cyberinfrastructure_2009, 26] but only recently tackled and therefore not yet solved [@romanello_singap; @Romanello2013]. 
+Canonical citations are the standard way of citing primary sources (i.e. the ancient texts) in Classics: the ability to read them, that is knowing what the various abbreviations therein used stand for, is part of the early training of any classicist. Having an expert system to capture automatically these citations and their meaning is one of the aims of the project of which the research presented in this paper is part: this issue has been relatively long known [@crane_cyberinfrastructure_2009, 26] but only recently tackled and therefore not yet solved [@romanello_singap; @Romanello2013]. 
 
 Such a system has great potential both for scholars in Classics and for the study of Classics as a discipline: capturing the citations of ancient texts that are contained in journal articles, commentaries, monographs and other secondary sources, allows us, for example, to track over time how and how much such texts were studied, an essential piece of information for a data-driven study of the discipline and its evolution.
 
@@ -28,13 +28,13 @@ In fact, my approach to citation extraction (see Fig. 2, no. 1 and 2) is essenti
 
 <img src="extraction_steps.png" width="90%" />
 
-	Once captured, citations need to be disambiguated: this is done by assigning to each citation its corresponding CTS URN [@hmt-doku-ctsurns]. CTS URNs are a kind of identifiers that follow the Uniform Resource Name standard and were developed in the framework of the Multitext Homer project as part of the CITE architecture and were designed to become the equivalent of canonical citations in a digital environment, in the sense that they allow one to "identify and retrieve digital representations of texts" [ref, @HMT-doku][^1]. What this means in practice is that the citation "Hell. 3.3.1-4" of the example showed in Fig. 2 (no. 3) is mapped to its corresponding URN, namely `urn:cts:greekLit:tlg0032.tlg001:3.3.1-3.3.4`.
+	Once captured, citations need to be disambiguated: this is done by assigning to each citation its corresponding CTS URN. What this means in practice is that, for instance, the citation "Hell. 3.3.1-4" of the example showed in Fig. 2 (no. 3) is mapped to its corresponding URN, namely `urn:cts:greekLit:tlg0032.tlg001:3.3.1-3.3.4`. Designed to become the equivalent of canonical citations in a digital environment, CTS URNs are a kind of identifiers that follows the Uniform Resource Name standard and was developed within the Multitext Homer project as part of the CITE architecture to make it possible to "identify and retrieve digital representations of texts" [@hmt-doku-ctsurns][^1].
 
 [^1]: To date one of the main adopters of this technology is the Perseus project that has built on top of it to provide several functionalities of its digital library and catalog [internal ref?].
 
 ## A Knowledge Base of Canonical Texts
 
-NER systems of this kind typically require/rely on a surrogate of domain knowledge, such as a gazetteer or a knowledge base, to support both the extraction and disambiguation of NEs, and even more so in the case of open domain applications. To support the disambiguation of canonical citations such a knowledge base needs to contain, for example, all possible abbreviations of the name of an author or the title of a work, possibly in multiple languages to work on multi-lingual corpora.  Since the texts we are dealing with are canonical it is possible to store in this knowledge base, In addition to abbreviations, also detailed information about the citable structures of each text such as for example how many books are contained in Thucydides' *Histories*, how many chapters are contained in book 1 etc. 
+NER systems of this kind typically require and rely on a surrogate of domain knowledge, such as a gazetteer or a knowledge base, to support both the extraction and disambiguation of NEs<!--, and even more so in the case of open domain applications-->. To support the disambiguation of canonical citations such a knowledge base needs to contain, for example, all possible abbreviations of the name of an author or the title of a work, possibly in multiple languages to work on multi-lingual corpora.  Since the texts we are dealing with are canonical it is possible to store in this knowledge base, in addition to abbreviations, also detailed information about the citable structures of each text such as for example how many books are contained in Thucydides' *Histories*, how many chapters are contained in book 1 etc. 
 Being able to query this sort of information allows one to validate the automatically extracted citations, thus making possible to identify, if not to recover, those citations that are just *impossible*. An example of this phenomenon is the string "Thuc. 5. 14. 1. 41.": although it looks as a plausible citation, it is not a valid one as the work here referred to--Thucydides' *Histories*--is made of three, not four, citable, hierarchical levels, (i.e. book/chapter/section). Such errors are very common when working with OCRed texts where the lack of structural markup causes, as in this case, the footnote number to be mistakenly interpreted as being part of the canonical citation "Thuc. 5. 14. 1". 
 
 <!-- 
@@ -83,13 +83,13 @@ As showed in Fig. 3 our record is linked to the one contained in the Perseus Cat
 [^3]: The HuCit namespace is <http://purl.org/net/hucit>; the source code and some examples can be found in the code repository at <https://bitbucket.org/56k/hucit/>.
 
 
-## Publishing Extracted Citations
+## Publishing Extracted Citations as Linked Open Data
 
 Not only are canonical citations important because of their function, they are also interesting artifacts in themselves. They were designed, well before the advent of digital technologies, to refer to texts in a very precise and interoperable way: *precise* because texts are the fundamental object of philological research, therefore a scholarly discourse about texts needs a very accurate way of referring to them; *interoperable* because although texts may exist in different editions and translations, scholars need to be able to refer to specific sections of them without having to worry about the many possible variations in pagination or layout each single edition may present.
 
 If we accept that canonical citations are already a way of linking objects--namely the citing and the cited texts--extracting them means then to reconstruct and make explicit such links that already exist, in some form, in the text. The act of transforming citations into hyperlinks, however, may lead to a misrepresentation of their nature and specifically of their being designed to be interoperable: a canonical citation should not be tight to the referred passage in a specific edition, but should rather work as a resolvable pointer, that can be resolved to a given portion of text in any (available) edition or translation. 
 
-Let us now look at an example of how the extracted citations are being stored and published online as Linked Open Data [@Heath2011]. By following an approach that was largely inspired by the Pelagios Project[^pelagios], extracted canonical citations are represented as annotations as defined by the Open Annotation Data Model[^oac] (see Fig. 4). 
+Let us now look at an example of how the extracted citations are being stored and will be published online as Linked Open Data [@Heath2011]. By following an approach that was largely inspired by the Pelagios Project[^pelagios], extracted canonical citations are represented as annotations as defined by the Open Annotation Data Model[^oac] (see Fig. 4). A new annotation is created for each extracted citation: the string containing the citation becomes its label, whereas the citing and the cited texts become respectively its target and body--to use the OAC terminology--as expressed by the `oac:hasTarget` and `oac:hasBody` properties. The property `oac:motivatedBy` is used here to clarify the reason for creating such annotations: I chose `oac:identifying` as, in fact, extracting citations can be seen as the act of making explicit what is the object (i.e. text section) that is identified by a given citation.
 
 [^pelagios]: Pelagios: Enable Linked Ancient Geodata In Open Systems, http://pelagios-project.blogspot.com. 
 [^oac]: Open Annotation Data Model, http://www.openannotation.org/spec/core/.
@@ -102,7 +102,12 @@ Let us now look at an example of how the extracted citations are being stored an
 	    oac:hasBody <http://data.mr56k.info/urn:cts:greekLit:tlg0003.tlg001:1.101>;
 	    oac:hasTarget <http://jstor.org/stable/10.2307/268729> .
 
-The string containing the citation is used as label for the annotation, whereas the citing and the cited texts become respectively its target and body--to use the OAC terminology--and are identified by the  `oac:hasTarget` and `oac:hasBody` properties. The RDF fragment that is returned when the body URI is resolved (see Fig. 4) shows how the citation is not linked directly to the digital text but points to an intermediate object called `hucit:TextElement`. This abstract object identifies a citable element within the hierarchical structure of a text and is linked via the `hucit:resolves_to` property to digital representations of the cited passage, in this case the editions and translations available in the Perseus Digital Library[^4]. Finally, the property `oac:motivatedBy` is used to explain the reason for creating the annotation, which in this case is to make explicit the object that is identified by a given citation.
+
+
+The RDF fragment that is returned when the body URI is resolved (see Fig. 5) shows how the citation is not linked directly to the digital text but points to an intermediate object called `hucit:TextElement`[^4]. This abstract object identifies a citable element within the hierarchical structure of a text and is linked via the `hucit:resolves_to` property to digital representations of the cited passage, in this case the editions and translations available in the Perseus Digital Library and via the Classical Works Knowledge Base (CWKB) resolution service. It must be pointed out, however, that linking to these resources is not, strictly and technically speaking, LOD-compliant as these URIs do not resolve (yet) to an RDF representation of the resource identified by the URI. However, as it has emerged clearly during the LAWDI event at which this paper was presented, linking resources together is the first necessary step to LOD, that it is hoped will be followed by making the underlying technology compliant with the LOD principles. 
+
+<!-- how is interoperability preserved? -->
+
 
 [^4]: For further details about the design of HuCit see @Romanello2013a.
 [^5]: Previous studies have already tackled the technical problem of how such citations can be transformed into links and have immediately seen/recognised the potential benefit for the users [refs]. 
@@ -123,7 +128,10 @@ The string containing the citation is used as label for the annotation, whereas 
 		hucit:precedes <http://data.mr56k.info/urn:cts:greekLit:tlg0012.tlg001:1.102>;
 	    hucit:resolves_to <http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg001.perseus-eng1:1.1>,
 	        <http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg001.perseus-eng2:1.1>,
-	        <http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg001.perseus-grc1:1.1> . 
+	        <http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg001.perseus-grc1:1.1>,
+			<http://cwkb.org/resolver?rft.au=Thucydides&rft.title=Historiae&rft.slevel1=1&rft.slevel2=101&rft_val_fmt=info:ofi/fmt:kev:mtx:canonical_cit&ctx_ver=Z39.88-2004> .
+			
+
 
 
 ## Works Cited

@@ -2,20 +2,20 @@
 
 ## [Matteo Romanello]()
 
-Canonical citations are the standard way of citing primary sources (i.e. the
-ancient texts) in Classics: the ability to read them, that is knowing what the
-various abbreviations therein used stand for, is part of the early training of
+Canonical citations are the standard way of citing primary sources (i.e., the
+ancient texts) in Classics: the ability to read them, which requires knowing
+what numerous abbreviations stand for, is part of the early training of
 any classicist. Having an expert system to capture automatically these citations
 and their meaning is one of the aims of the project of which the research
-presented in this paper is part: this issue has been relatively long known
-[@crane_cyberinfrastructure_2009, 26] but only recently tackled and therefore
-not yet solved [@romanello_singap; @Romanello2013]. 
+presented in this paper is part. The desire for such a system has existed for
+a considerable amount of time [@crane_cyberinfrastructure_2009, 26] but has yet
+to be solved [@romanello_singap; @Romanello2013]. 
 
 Such a system has great potential both for scholars in Classics and for the
 study of Classics as a discipline: capturing the citations of ancient texts that
 are contained in journal articles, commentaries, monographs and other secondary
-sources, allows us, for example, to track over time how and how much such texts
-were studied, an essential piece of information for a data-driven study of the
+sources, allows us, for example, to track over time how and how often texts were
+studied, essential pieces of information for a data-driven study of the
 discipline and its evolution.
 
 Another possible use of the system is to display related bibliographic
@@ -26,7 +26,7 @@ interface of the Hellespont project[^hell] with such a functionality (see Fig.
 environment for one specific section of Thucydides' *Histories*, the so-called
 "Pentecontaetia" (Thuc. 1,89 to 1,118). The references that are displayed in the
 secondary literature view of the reading interface are mined automatically from
-JSTOR and are showed together with links to the full-text of the journal article
+JSTOR and are shown together with links to the full text of the journal article
 as well as to the cited passage in the Perseus digital library [@Romanello2012]. 
 
 [^hell]: The Hellespont Project: Integrating Arachne and Perseus, http://hellespont.dainst.org/
@@ -41,17 +41,16 @@ as well as to the cited passage in the Perseus digital library [@Romanello2012].
 
 <!--Before going into more details concerning the ontological modelling of canonical texts and citations, let us consider briefly how the extraction of such citations from texts is performed. -->
 
-Extracting citations means, in fact, performing two different tasks: firstly,
-capturing the strings that constitute the citation and secondly establishing the
-actual meaning of that citation or, in other words, determining to which
-specific section of which text is that citation referring to. In Natural
+Extracting citations requires performing two different tasks. First, the strings
+that constitute the citation are captured. Second, the referent of that citation
+is established---the specific section of text to which the citation refers. In Natural
 Language Processing (NLP) jargon these two steps are called respectively Named
 Entity Recognition (or extraction) and Named Entity Disambiguation. 
 
-In fact, my approach to citation extraction (see Fig. 2, no. 1 and 2) is
+My approach to citation extraction (see Fig. 2, no. 1 and 2) is
 essentially based on state-of-the-art NER techniques with the only difference
-being what it takes to adapt these techniques to the new domain to which they
-are applied [@Romanello2013]. Instead of considering only the usual NEs--such as
+being what it takes to adapt these techniques to the new domain [@Romanello2013]. Instead of
+considering only the usual named entities (NEs)--such as
 names of people, places and organizations--I treat as NEs the different
 components of a citation in addition to any mention of ancient authors and works
 occurring in the context that surrounds the citation itself. For this purpose
@@ -68,7 +67,7 @@ the other entities (i.e. `aauthor`, `awork` and `refauwork`).
 Once captured, citations need to be disambiguated: this is done by assigning to
 each citation its corresponding CTS URN. What this means in practice is that,
 for instance, the citation "Hell. 3.3.1-4" of the example showed in Fig. 2 (no.
-3) is mapped to its corresponding URN, namely
+3) is mapped to its corresponding URN,
 `urn:cts:greekLit:tlg0032.tlg001:3.3.1-3.3.4`. Designed to become the equivalent
 of canonical citations in a digital environment, CTS URNs are a kind of
 identifiers that follows the Uniform Resource Name standard and was developed
@@ -86,13 +85,14 @@ extraction and disambiguation of NEs<!--, and even more so in the case of open
 domain applications-->. To support the disambiguation of canonical citations
 such a knowledge base needs to contain, for example, all possible abbreviations
 of the name of an author or the title of a work, possibly in multiple languages
-to work on multi-lingual corpora.  Since the texts we are dealing with are
-canonical it is possible to store in this knowledge base, in addition to
-abbreviations, also detailed information about the citable structures of each
-text such as for example how many books are contained in Thucydides'
+if working on multi-lingual corpora.  Since the texts we are dealing with are
+canonical it is possible to use this knowledge base to store, in addition to
+abbreviations, detailed information about the citable structures of each
+text
+such as, for example, how many books are contained in Thucydides'
 *Histories*, how many chapters are contained in book 1 etc.  Being able to query
 this sort of information allows one to validate the automatically extracted
-citations, thus making possible to identify, if not to recover, those citations
+citations, thus making it possible to identify, if not to recover, those citations
 that are just *impossible*. An example of this phenomenon is the string "Thuc.
 5. 14. 1. 41.": although it looks as a plausible citation, it is not a valid one
 as the work here referred to--Thucydides' *Histories*--is made of three, not
@@ -147,8 +147,8 @@ HUmanities CITation Ontology (HuCit)[^3].
 	    rdfs:label "Thuc.";
 	    ecrm:P2_has_type <http://data.mr56k.info/type_abbreviation> .
 	
-As showed in Fig. 3 our record is linked to the one contained in the Perseus
-Catalog; the CTS URN associated to the work as well as the abbreviations of its
+As shown in Fig. 3 our record is linked to a record in the Perseus
+Catalog; the CTS URN associated with the work as well as the abbreviations of its
 title are explicitly modelled by using respectively the CIDOC-CRM classes
 `E42_Identifier` and  `E41_Appellation`. <!-- say that the Perseus Catalog URIs
 do not currently provide an RDF presentation but this will happen in the next
@@ -165,24 +165,24 @@ Not only are canonical citations important because of their function, they are
 also interesting artifacts in themselves. They were designed, well before the
 advent of digital technologies, to refer to texts in a very precise and
 interoperable way: *precise* because texts are the fundamental object of
-philological research, therefore a scholarly discourse about texts needs a very
+philological research, therefore a scholarly discourse about texts needs an
 accurate way of referring to them; *interoperable* because although texts may
 exist in different editions and translations, scholars need to be able to refer
 to specific sections of them without having to worry about the many possible
 variations in pagination or layout each single edition may present.
 
 If we accept that canonical citations are already a way of linking
-objects--namely the citing and the cited texts--extracting them means then to
-reconstruct and make explicit such links that already exist, in some form, in
-the text. The act of transforming citations into hyperlinks, however, may lead
+objects--i.e., the citing text and the cited text--extracting citations
+reconstructs and makes explicit links that already exist in the text. The act of
+transforming citations into hyperlinks, however, may lead
 to a misrepresentation of their nature and specifically of their being designed
-to be interoperable: a canonical citation should not be tight to the referred
+to be interoperable: a canonical citation should not be tight <!-- allen: tied? --> to the referenced
 passage in a specific edition, but should rather work as a resolvable pointer,
-that can be resolved to a given portion of text in any (available) edition or
+that can be resolved to a given portion of text in any available edition or
 translation. 
 
-Let us now look at an example of how the extracted citations are being stored
-and will be published online as Linked Open Data [@Heath2011]. By following an
+Let us now consider how extracted citations are stored
+and published online as Linked Open Data [@Heath2011]. By following an
 approach that was largely inspired by the Pelagios Project[^pelagios], extracted
 canonical citations are represented as annotations as defined by the Open
 Annotation Data Model[^oac] (see Fig. 4). A new annotation is created for each

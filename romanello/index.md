@@ -176,7 +176,7 @@ objects--i.e., the citing text and the cited text--extracting citations
 reconstructs and makes explicit links that already exist in the text. The act of
 transforming citations into hyperlinks, however, may lead
 to a misrepresentation of their nature and specifically of their being designed
-to be interoperable: a canonical citation should not be tight <!-- allen: tied? --> to the referenced
+to be interoperable: a canonical citation should not be tied to the referenced
 passage in a specific edition, but should rather work as a resolvable pointer,
 that can be resolved to a given portion of text in any available edition or
 translation. 

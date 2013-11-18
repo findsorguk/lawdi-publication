@@ -6,6 +6,16 @@ body {
  width:70%;
 }
 
+footer {
+ text-indent:0;
+ border-style-top:dotted;
+ margin-top:1em;
+}
+
+footer p {
+ text-indent:0;
+}
+
 #front { 
  margin-top:2em;
  }
@@ -16,6 +26,10 @@ p {
  padding:0;
  line-height:1.4em;
  }
+
+.author,#author {
+ text-align:center;
+}
  
  .abstract,#abstract {
   margin-left:3em;
@@ -122,26 +136,27 @@ p.figure_title {font-family:sans-serif;text-indent:0;font-size:smaller;font-weig
 p.figure_caption {font-family:sans-serif;text-indent:0;font-size:smaller; margin-bottom:2em;}
 p.figure > img {max-width:90%}
 	 
-	    .work_cited {
+#works-cited p {
+     margin-top:.5em;
      margin-left:.25in;
      text-indent:-.25in
      }
      
-     #works_cited a {
+     #works-cited a {
    border-bottom:thin dotted gray;
    color:gray;
   }
   
-   .work_cited_links {
+   .work-cited-links {
      color:gray;
      }
     
-    .work_cited {
+    .work-cited {
      margin-left:.25in;
      text-indent:-.25in
      }
      
-   .editorial_note {
+   .editorial-note {
     font-style:italic;
     margin-top:5px;
     margin-top:5px;
@@ -149,22 +164,3 @@ p.figure > img {max-width:90%}
 
 
 
-*[xml|lang |= 'grc'] {
-font-family:"New Athena Unicode";
-}
-       
-*[xml|lang |= 'egyd'] {
-font-family:Umschrift_TTn;
-}
-       
-    *:lang(grc){font-family:"New Athena Unicode";}
-    *:lang(egyd){font-family:Umschrift_TTn;}
- 
-
-*[xml|lang |= 'syr'] {
-   font-family:"Serto Urhoy"; 
-}
-
-xml:lang(syr) {
- font-family:"Serto Urhoy";
- }

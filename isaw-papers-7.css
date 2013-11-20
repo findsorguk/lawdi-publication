@@ -136,11 +136,6 @@ p.figure_title {font-family:sans-serif;text-indent:0;font-size:smaller;font-weig
 p.figure_caption {font-family:sans-serif;text-indent:0;font-size:smaller; margin-bottom:2em;}
 p.figure > img {max-width:90%}
 	 
-#works-cited p {
-     margin-top:.5em;
-     margin-left:.25in;
-     text-indent:-.25in
-     }
      
      #works-cited a {
    border-bottom:thin dotted gray;

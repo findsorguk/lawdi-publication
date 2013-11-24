@@ -8,8 +8,11 @@
   <link rel="stylesheet" href="../isaw-papers-7.css" type="text/css" />
 </head>
 <body>
+<article>
 <h1 id="mining-citations-linking-texts">Mining Citations, Linking Texts</h1>
 <h2 id="matteo-romanello"><a href="">Matteo Romanello</a></h2>
+
+<section>
 <p>Canonical citations are the standard way of citing primary sources (i.e., the ancient texts) in Classics: the ability to read them, which requires knowing what numerous abbreviations stand for, is part of the early training of any classicist. Having an expert system to capture automatically these citations and their meaning is one of the aims of the project of which the research presented in this paper is part. The desire for such a system has existed for a considerable amount of time <span class="citation">(Crane, Seales, and Terras 2009, 26)</span> but has yet to be solved <span class="citation">(Romanello, Boschetti, and Crane 2009; Romanello 2013)</span>.</p>
 <p>Such a system has great potential both for scholars in Classics and for the study of Classics as a discipline: capturing the citations of ancient texts that are contained in journal articles, commentaries, monographs and other secondary sources, allows us, for example, to track over time how and how often texts were studied, essential pieces of information for a data-driven study of the discipline and its evolution.</p>
 <p>Another possible use of the system is to display related bibliographic references within a reading environment for ancient texts. The examples that are used in this paper are taken from work that has been done to provide the GapVis interface of the Hellespont project<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> with such a functionality (see Fig. 1). One of the goals of the project is to create an enhanced virtual reading environment for one specific section of Thucydides’ <em>Histories</em>, the so-called “Pentecontaetia” (Thuc. 1,89 to 1,118). The references that are displayed in the secondary literature view of the reading interface are mined automatically from JSTOR and are shown together with links to the full text of the journal article as well as to the cited passage in the Perseus digital library <span class="citation">(Romanello and Thomas 2012)</span>.</p>
@@ -101,29 +104,37 @@ release --></p>
         &lt;http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg001.perseus-eng2:1.1&gt;,
         &lt;http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg001.perseus-grc1:1.1&gt;,
         &lt;http://cwkb.org/resolver?rft.au=Thucydides&amp;rft.title=Historiae&amp;rft.slevel1=1&amp;rft.slevel2=101&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:canonical_cit&amp;ctx_ver=Z39.88-2004&gt; .</code></pre>
-<h2 id="works-cited">Works Cited</h2>
-<!-- notes -->
+</section>
 
 
-<p>Babeu, Alison, David Bamman, Gregory Crane, Robert Kummer, and Gabriel Weaver. 2007. “Named Entity Identification and Cyberinfrastructure.” In <em>Research and Advanced Technology for Digital Libraries</em>, ed. László Kovács, Norbert Fuhr, and Carlo Meghini, 259–270. Springer. <a href="http://dx.doi.org/10.1007/978-3-540-74851-9\_22" title="http://dx.doi.org/10.1007/978-3-540-74851-9\_22">http://dx.doi.org/10.1007/978-3-540-74851-9\_22</a>.</p>
-<p>Crane, Gregory, Brent Seales, and Melissa Terras. 2009. “Cyberinfrastructure for Classical Philology.” <em>Digital Humanities Quarterly</em> 3. <a href="http://www.digitalhumanities.org/dhq/vol/3/1/000023/000023.html" title="http://www.digitalhumanities.org/dhq/vol/3/1/000023/000023.html">http://www.digitalhumanities.org/dhq/vol/3/1/000023/000023.html</a>.</p>
-<p>Heath, Tom, and Christian Bizer. 2011. <em>Linked Data: Evolving the Web into a Global Data Space</em>. <em>Synthesis Lectures on the Semantic Web</em>. Morgan &amp; Claypool Publishers.</p>
-<p>Romanello, Matteo. 2013. “Creating an Annotated Corpus for Extracting Canonical Citations from Classics-Related Texts by Using Active Annotation.” In <em>Computational Linguistics and Intelligent Text Processing. 14th International Conference, CICLing 2013, Samos, Greece, March 24-30, 2013, Proceedings, Part I</em>, ed. Alexander Gelbukh, 1:60–76. Springer Berlin Heidelberg. doi:10.1007/978-3-642-37247-6\_6.</p>
-<p>Romanello, Matteo, Federico Boschetti, and Gregory Crane. 2009. “Citations in the digital library of classics: extracting canonical references by using conditional random fields.” In <em>Proceedings of the 2009 Workshop on Text and Citation Analysis for Scholarly Digital Libraries</em>, 80–87. Morristown, NJ, USA: Association for Computational Linguistics.</p>
-<p>Romanello, Matteo, and Michele Pasin. 2013. “Citations and Annotations in Classics : Old Problems and New Perspectives.” In <em>DH-Case 2013</em>. ACM. <a href="http://dx.doi.org/10.1145/2517978.2517981" title="http://dx.doi.org/10.1145/2517978.2517981">http://dx.doi.org/10.1145/2517978.2517981</a>.</p>
-<p>Romanello, Matteo, and Agnes Thomas. 2012. “The World of Thucydides: From Texts to Artefacts and Back.” In <em>Revive the Past. Proceeding of the 39th Conference on Computer Applications and Quantitative Methods in Archaeology. Beijing, 12-16 April 2011</em>, ed. Mingquan Zhou, Iza Romanowska, Wu Zhongke, Xu Pengfei, and Philip Verhagen, 276–284. Amsterdam University Press. <a href="http://dare.uva.nl/document/358465" title="http://dare.uva.nl/document/358465">http://dare.uva.nl/document/358465</a>.</p>
-<p>Smith, Neel, and Christopher Blackwell. 2012. “Homer Multitext Project: documentation. An overview of the CTS URN notation.” <a href="http://www.homermultitext.org/hmt-doc/cite/cts-urn-overview.html" title="http://www.homermultitext.org/hmt-doc/cite/cts-urn-overview.html">http://www.homermultitext.org/hmt-doc/cite/cts-urn-overview.html</a>.</p>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>The Hellespont Project: Integrating Arachne and Perseus, http://hellespont.dainst.org/.<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>To date one of the main adopters of this technology is the Perseus project that has built on top of it to provide several functionalities of its digital library and catalog [internal ref?].<a href="#fnref2">↩</a></p></li>
-<li id="fn3"><p>The Erlangen OWL implementations of both CIDOC-CRM and FRBRoo were used: they are available respectively at <a href="http://erlangen-crm.org/"><code class="url">http://erlangen-crm.org/</code></a> and <a href="http://erlangen-crm.org/efrbroo"><code class="url">http://erlangen-crm.org/efrbroo</code></a>.<a href="#fnref3">↩</a></p></li>
-<li id="fn4"><p>The HuCit namespace is <a href="http://purl.org/net/hucit"><code class="url">http://purl.org/net/hucit</code></a>; the source code and some examples can be found in the code repository at <a href="https://bitbucket.org/56k/hucit/"><code class="url">https://bitbucket.org/56k/hucit/</code></a>.<a href="#fnref4">↩</a></p></li>
-<li id="fn5"><p>Pelagios: Enable Linked Ancient Geodata In Open Systems, http://pelagios-project.blogspot.com.<a href="#fnref5">↩</a></p></li>
-<li id="fn6"><p>Open Annotation Data Model, http://www.openannotation.org/spec/core/.<a href="#fnref6">↩</a></p></li>
-<li id="fn7"><p>For further details about the design of HuCit see <span class="citation">Romanello and Pasin (2013)</span>.<a href="#fnref7">↩</a></p></li>
-</ol>
-</div>
+<section id="endnotes">
+<h2>Notes</h2>
+<p class="endnote" id="endnote-1"><sup><a href="#endnote-reference-1">1</a></sup> The Hellespont Project: Integrating Arachne and Perseus, http://hellespont.dainst.org/.</p>
+
+<p class="endnote" id="endnote-2"><sup><a href="#endnote-reference-2">2</a></sup> To date one of the main adopters of this technology is the Perseus project that has built on top of it to provide several functionalities of its digital library and catalog [internal ref?].</p>
+
+<p class="endnote" id="endnote-3"><sup><a href="#endnote-reference-3">3</a></sup> The Erlangen OWL implementations of both CIDOC-CRM and FRBRoo were used: they are available respectively at <a href="http://erlangen-crm.org/"><code class="url">http://erlangen-crm.org/</code></a> and <a href="http://erlangen-crm.org/efrbroo"><code class="url">http://erlangen-crm.org/efrbroo</code></a>.</p>
+
+<p class="endnote" id="endnote-4"><sup><a href="#endnote-reference-4">4</a></sup> The HuCit namespace is <a href="http://purl.org/net/hucit"><code class="url">http://purl.org/net/hucit</code></a>; the source code and some examples can be found in the code repository at <a href="https://bitbucket.org/56k/hucit/"><code class="url">https://bitbucket.org/56k/hucit/</code></a>.</p>
+
+<p class="endnote" id="endnote-5"><sup><a href="#endnote-reference-5">5</a></sup> Pelagios: Enable Linked Ancient Geodata In Open Systems, http://pelagios-project.blogspot.com.</p>
+
+<p class="endnote" id="endnote-6"><sup><a href="#endnote-reference-6">6</a></sup> Open Annotation Data Model, http://www.openannotation.org/spec/core/.<a href="#fnref6">↩</a></p>
+
+<p class="endnote" id="endnote=7"><sup><a href="#endnote-reference-7">7</a></sup> For further details about the design of HuCit see <span class="citation">Romanello and Pasin (2013)</span>.</p>
+</section>
+
+<section id="works-cited">
+<h2>Works Cited</h2>
+<p class="work-cited">Babeu, Alison, David Bamman, Gregory Crane, Robert Kummer, and Gabriel Weaver. 2007. “Named Entity Identification and Cyberinfrastructure.” In <em>Research and Advanced Technology for Digital Libraries</em>, ed. László Kovács, Norbert Fuhr, and Carlo Meghini, 259–270. Springer. <a href="http://dx.doi.org/10.1007/978-3-540-74851-9\_22" title="http://dx.doi.org/10.1007/978-3-540-74851-9\_22">http://dx.doi.org/10.1007/978-3-540-74851-9\_22</a>.</p>
+<p class="work-cited">Crane, Gregory, Brent Seales, and Melissa Terras. 2009. “Cyberinfrastructure for Classical Philology.” <em>Digital Humanities Quarterly</em> 3. <a href="http://www.digitalhumanities.org/dhq/vol/3/1/000023/000023.html" title="http://www.digitalhumanities.org/dhq/vol/3/1/000023/000023.html">http://www.digitalhumanities.org/dhq/vol/3/1/000023/000023.html</a>.</p>
+<p class="work-cited">Heath, Tom, and Christian Bizer. 2011. <em>Linked Data: Evolving the Web into a Global Data Space</em>. <em>Synthesis Lectures on the Semantic Web</em>. Morgan &amp; Claypool Publishers.</p>
+<p class="work-cited">Romanello, Matteo. 2013. “Creating an Annotated Corpus for Extracting Canonical Citations from Classics-Related Texts by Using Active Annotation.” In <em>Computational Linguistics and Intelligent Text Processing. 14th International Conference, CICLing 2013, Samos, Greece, March 24-30, 2013, Proceedings, Part I</em>, ed. Alexander Gelbukh, 1:60–76. Springer Berlin Heidelberg. doi:10.1007/978-3-642-37247-6\_6.</p>
+<p class="work-cited">Romanello, Matteo, Federico Boschetti, and Gregory Crane. 2009. “Citations in the digital library of classics: extracting canonical references by using conditional random fields.” In <em>Proceedings of the 2009 Workshop on Text and Citation Analysis for Scholarly Digital Libraries</em>, 80–87. Morristown, NJ, USA: Association for Computational Linguistics.</p>
+<p class="work-cited">Romanello, Matteo, and Michele Pasin. 2013. “Citations and Annotations in Classics : Old Problems and New Perspectives.” In <em>DH-Case 2013</em>. ACM. <a href="http://dx.doi.org/10.1145/2517978.2517981" title="http://dx.doi.org/10.1145/2517978.2517981">http://dx.doi.org/10.1145/2517978.2517981</a>.</p>
+<p class="work-cited">Romanello, Matteo, and Agnes Thomas. 2012. “The World of Thucydides: From Texts to Artefacts and Back.” In <em>Revive the Past. Proceeding of the 39th Conference on Computer Applications and Quantitative Methods in Archaeology. Beijing, 12-16 April 2011</em>, ed. Mingquan Zhou, Iza Romanowska, Wu Zhongke, Xu Pengfei, and Philip Verhagen, 276–284. Amsterdam University Press. <a href="http://dare.uva.nl/document/358465" title="http://dare.uva.nl/document/358465">http://dare.uva.nl/document/358465</a>.</p>
+<p class="work-cited">Smith, Neel, and Christopher Blackwell. 2012. “Homer Multitext Project: documentation. An overview of the CTS URN notation.” <a href="http://www.homermultitext.org/hmt-doc/cite/cts-urn-overview.html" title="http://www.homermultitext.org/hmt-doc/cite/cts-urn-overview.html">http://www.homermultitext.org/hmt-doc/cite/cts-urn-overview.html</a>.</p>
+</section>
+</article>
 </body>
 </html>

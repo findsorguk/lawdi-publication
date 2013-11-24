@@ -138,6 +138,10 @@ margin-top:1em;
 p.figure_title {font-family:sans-serif;text-indent:0;font-size:smaller;font-weight:bold;text-align:center;margin-bottom:1em}
 p.figure_caption {font-family:sans-serif;text-indent:0;font-size:smaller; margin-bottom:2em;}
 p.figure > img {max-width:90%}
+
+img {
+ max-width:500px;
+}
  
 .endnote {
  text-indent:0;

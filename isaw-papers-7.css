@@ -6,6 +6,11 @@ body {
  width:70%;
 }
 
+header {
+ margin-top: 2em;
+ margin-bottom:1em;
+}
+
 footer {
  text-indent:0;
  border-style-top:dotted;

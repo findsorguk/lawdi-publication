@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" prefix="dcterms: http://purl.org/dc/terms/">
-    <head>
-        <title>Berkeley Prosopography Services</title>
-<link rel="stylesheet" href="../isaw-papers-7.css" />
-    </head>
-    <body>
+<head>
+ <title>Berkeley Prosopography Services</title>
+ <link rel="stylesheet" href="../isaw-papers-7.css" />
+ <link rel="dcterms:isPartOf" href="http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/"/>
+</head>
+<body>
     <article>
     <header>
-    <h1 class="articleTitle">Berkeley Prosopography Services</h1>
-    <div class="author"><a href="">Laurie Pearce</a></div>
-    <div class="author"><a href="">Patrick Schmitz, technical lead</a></div>
+    <h2>ISAW Papers 7.19 (2013)</h2>
+    <h1 property="dcterms:title">Berkeley Prosopography Services</h1>
+    <h2><span property="dcterms:creator">Laurie Pearce</span> and <span property="dcterms:creator">Patrick Schmitz</span></h2>
     </header>
 
-<p>Berkeley Prosopography Services (BPS, berkeleyprosopography.org) is a complete package,  an interactive tool-kit for analyzing and visualizing prosopographical datasets, available to researchers working in diverse disciplines and operating on data that derive from a variety of text sources and formats. BPS developed as a collaboration between University of California Berkeley researchers in Near Eastern Studies eager for digital tools to facilitate prosopographical research, and a central Research IT team working to develop digital resources that served actual research needs.</p>
+<p>Berkeley Prosopography Services (BPS, <a href="http://berkeleyprosopography.org">berkeleyprosopography.org</a>) is a complete package,  an interactive tool-kit for analyzing and visualizing prosopographical datasets, available to researchers working in diverse disciplines and operating on data that derive from a variety of text sources and formats. BPS developed as a collaboration between University of California Berkeley researchers in Near Eastern Studies eager for digital tools to facilitate prosopographical research, and a central Research IT team working to develop digital resources that served actual research needs.</p>
 
 <p>BPS innovates by providing a complete package of software tools to perform association and computation tasks for name disambiguation, by adding a new model for curation and collaboration, and by connecting Social Network Analysis (SNA) tools and visualizations. At the heart of the BPS productivity and visualization tools, and workspace support for exploration and collaboration, is an assertion model that is predicated on hueristics  conventially (and manually) implemented by researchers working with onomastic and prosopographical data.</p>
 
-<p>BPS tools include 1) functionality to import TEI documents and convert to our data model, 2) a disambiguation engine to associate names to persons based upon configurable heuristic rules, 3) an assertion model that supports flexible researcher curation and tracks provenance, 4) social network analysis and 5) graph visualization tools to analyze and understand social relations, and 6) a workspace model supporting exploratory research and collaboration. The assertion model poses a challenge to the assignment of unique identifiers and application of LOD.</p>
+<p>BPS tools include 1) functionality to import TEI documents and convert to our data model, 2) a disambiguation engine to associate names to persons based upon configurable heuristic rules, 3) an assertion model that supports flexible researcher curation and tracks provenance, 4) social network analysis and 5) graph visualization tools to analyze and understand social relations, and 6) a workspace model supporting exploratory research and collaboration. The assertion model poses a challenge to the assignment of unique identifiers and application of Linked Open Data (LOD).</p>
 
-<p>The processing steps reflect the BPS architecture, which is divided into three major areas (diagram available at: https://wikihub.berkeley.edu/x/BoPCB):</p>
+<p>The processing steps reflect the BPS architecture, which is divided into three major areas (diagram available at: <a href="https://wikihub.berkeley.edu/x/BoPCB">https://wikihub.berkeley.edu/x/BoPCB</a>):</p>
 
 <p><strong>1.</strong> In Text Preprocessing, a corpus is converted from some native format to TEI. The development corpus for BPS is a group of ~500 Akkadian cuneiform legal documents Hellenistic Uruk, a corpus of the project Hellenistic Babylonia: Texts, Images and Names (HBTIN, oracc.org/hbtin). That project is a component of the Oracc consortium (On-line Richly Annotated Cuneiform Corpora, oracc.org), represented at LAWDI 2012 by Steve Tinney. HBTIN adheres to the shared standards and best practices of the Oracc community and the Cuneiform Digital Library Initiative (CDLI, cdli.ucla.edu).</p>
 
@@ -33,7 +34,7 @@
 
 <p>A primary task in prosopography is to determine which real-world person corresponds to a given name instance. All name instances in a corpus, both within a single document (intra-document) and in documents across the corpus (inter-document), provide evidence for disambiguation. The algorithmic model is based upon the heuristics that researchers have long used, and so is familiar to BPS users. To begin, a unique person is posited for each name instance in each document. Then, the model attempts to collapse persons into one another, so that the persons posited for name instances that refer to a given real-world person are collapsed into a single person in the model as well. It does this according to user-configured rules that operate on various features (properties) of each original person. Filiation (declaration of parents and ancestors) is a primary feature used by the model. Additional features include the activity in which each associated name instance is cited, the roles that the citation had in the activity, the date of the respective activities, etc.</p>
 
-<p>The rules of the model operate on these features and then can have one of three functions:
+<p>The rules of the model operate on these features and then can have one of three functions:</p>
 <ol>
 <li>Shift rules shift weight from one person to another</li>
 <li>Boost rules magnify the effect of applied shift rules</li>
@@ -54,6 +55,10 @@
 
 <p>In traditional prosopographical research, the disambiguation of individuals from among multiple name instances emerges from a single-authority disambiguation model; each individual so identified readily could be associated with a unique identifier.  However, the individual understandings of the representation of the assertions and the unique, variable results they may produce make it difficult to assign URIs to each individual. This is particularly so in the case of on-going research and analysis, and in the context of collaboration that occurs in the shared workspaces of BPS.</p>
 
+<footer>
+<p>©2013 Laurie Pearce and Patrick Schmitz. Published under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> license.</p>
+<p>This article is part of <i><a href="http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/">ISAW Papers 7</a></i>.</p>
+</footer>
 </article>
 </body>
 </html>

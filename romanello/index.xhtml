@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="dcterms: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/">
 <head>
   <title>Mining Citations, Linking Texts</title>
-  <link rel="stylesheet" href="../isaw-papers-7.css" type="text/css" />
+        <link rel="stylesheet" href="../isaw-papers-7.css" />
+        <link rel="dcterms:isPartOf" href="http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/" />
 </head>
 <body>
 <article>
 <header>
-<h1 id="mining-citations-linking-texts">Mining Citations, Linking Texts</h1>
-<h2 id="matteo-romanello"><a href="">Matteo Romanello</a></h2>
+<h2>ISAW Papers 7.24 (Preprint)</h2>
+<h1 property="dcterms:title">Mining Citations, Linking Texts</h1>
+<h2 property="dcterms:creator">Matteo Romanello</h2>
 </header>
 
-<p>Canonical citations are the standard way of citing primary sources (i.e., the ancient texts) in Classics: the ability to read them, which requires knowing what numerous abbreviations stand for, is part of the early training of any classicist. Having an expert system to capture automatically these citations and their meaning is one of the aims of the project of which the research presented in this paper is part. The desire for such a system has existed for a considerable amount of time <span class="citation">(Crane, Seales, and Terras 2009, 26)</span> but has yet to be solved <span class="citation">(Romanello, Boschetti, and Crane 2009; Romanello 2013)</span>.</p>
+<p class="textindent0">Canonical citations are the standard way of citing primary sources (i.e., the ancient texts) in Classics: the ability to read them, which requires knowing what numerous abbreviations stand for, is part of the early training of any classicist. Having an expert system to capture automatically these citations and their meaning is one of the aims of the project of which the research presented in this paper is part. The desire for such a system has existed for a considerable amount of time <span class="citation">(Crane, Seales, and Terras 2009, 26)</span> but has yet to be solved <span class="citation">(Romanello, Boschetti, and Crane 2009; Romanello 2013)</span>.</p>
 <p>Such a system has great potential both for scholars in Classics and for the study of Classics as a discipline: capturing the citations of ancient texts that are contained in journal articles, commentaries, monographs and other secondary sources, allows us, for example, to track over time how and how often texts were studied, essential pieces of information for a data-driven study of the discipline and its evolution.</p>
 <p>Another possible use of the system is to display related bibliographic references within a reading environment for ancient texts. The examples that are used in this paper are taken from work that has been done to provide the GapVis interface of the Hellespont project<sup><a href="#endnote-1" class="endnote-reference" id="endnote-reference-1">1</a></sup> with such a functionality (see Fig. 1). One of the goals of the project is to create an enhanced virtual reading environment for one specific section of Thucydides’ <em>Histories</em>, the so-called “Pentecontaetia” (Thuc. 1,89 to 1,118). The references that are displayed in the secondary literature view of the reading interface are mined automatically from JSTOR and are shown together with links to the full text of the journal article as well as to the cited passage in the Perseus digital library <span class="citation">(Romanello and Thomas 2012)</span>.</p>
-<!--...add some stuff...-->
+
 
 <h3 id="figure-1-secondary-literature-view-of-the-gapvis-based-reading-interface-of-the-hellespont-project.">Figure 1: Secondary literature view of the GapVis-based reading interface of the Hellespont project.</h3>
 <img src="hellespont_seclit.png" width="90%" />
@@ -30,7 +32,7 @@
 <p>Once captured, citations need to be disambiguated: this is done by assigning to each citation its corresponding CTS URN. What this means in practice is that, for instance, the citation “Hell. 3.3.1-4” of the example showed in Fig. 2 (no. 3) is mapped to its corresponding URN, <code>urn:cts:greekLit:tlg0032.tlg001:3.3.1-3.3.4</code>. Designed to become the equivalent of canonical citations in a digital environment, CTS URNs are a kind of identifiers that follows the Uniform Resource Name standard and was developed within the Multitext Homer project as part of the CITE architecture to make it possible to “identify and retrieve digital representations of texts” <span class="citation">(Smith and Blackwell 2012)</span><sup><a href="#endnote-2" class="endnote-reference" id="endnote-reference-2">2</a></sup>.</p>
 
 <section id="section1">
-<h2 id="a-knowledge-base-of-canonical-texts">A Knowledge Base of Canonical Texts</h2>
+<h2>A Knowledge Base of Canonical Texts</h2>
 <p>NER systems of this kind typically require and rely on a surrogate of domain knowledge, such as a gazetteer or a knowledge base, to support both the extraction and disambiguation of NEs<!--, and even more so in the case of open
 domain applications-->. To support the disambiguation of canonical citations such a knowledge base needs to contain, for example, all possible abbreviations of the name of an author or the title of a work, possibly in multiple languages if working on multi-lingual corpora. Since the texts we are dealing with are canonical it is possible to use this knowledge base to store, in addition to abbreviations, detailed information about the citable structures of each text such as, for example, how many books are contained in Thucydides’ <em>Histories</em>, how many chapters are contained in book 1 etc. Being able to query this sort of information allows one to validate the automatically extracted citations, thus making it possible to identify, if not to recover, those citations that are just <em>impossible</em>. An example of this phenomenon is the string “Thuc. 5. 14. 1. 41.”: although it looks as a plausible citation, it is not a valid one as the work here referred to–Thucydides’ <em>Histories</em>–is made of three, not four, citable, hierarchical levels, (i.e. book/chapter/section). Such errors are very common when working with OCRed texts where the lack of structural markup causes, as in this case, the footnote number to be mistakenly interpreted as being part of the canonical citation “Thuc. 5. 14. 1”.</p>
 <!-- 

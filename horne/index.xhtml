@@ -33,8 +33,8 @@ blog post</a> on the Pelagios site).</p>
 
 <p>An example of the API and linkages can be found at <a href="http://awmc.unc.edu/api/omnia/168940"> http://awmc.unc.edu/api/omnia/168940</a>,  representing the urban area of Rome c. 200 CE. The default splash page is generated dynamically by PHP with a PostGIS backend, presenting a reference map, links to Pleiades and Pelagios, and general information on the entry in a human-readable format as shown below:</p>
 
-<figure id="figure2">
-<img src="api_screen.png" height="300px" width="500px" alt="AWMC API image"/>
+<figure id="figure1">
+<img id="img1" src="figure1.png" alt="AWMC API image"/>
 </figure>
 
 <p>Any entry in the database can easily be displayed in JSON, RDF, or WKT by clicking on the provided buttons or  appending the desired representation to the end of the base URI as follows:</p>
@@ -49,8 +49,8 @@ in a remote machine, and can be consumed directly by mapping libraries such as O
 
 <p>The <a href="http://awmc.unc.edu/awmc/applications/alacarte/">current iteration of Antiquity À-la-carte</a> deploys the results of the API work by providing a web-based GIS application to display, sort, search, and disseminate the center's data. The application is built upon a <a href="http://awmc.unc.edu/wordpress/alacarte/credits/">suite of GIS technologies</a>,  exports a user-created map into GeoJSON, KML, CSV, and PDF formats, and can import a custom map generated from GeoJSON objects. The application also allows for the selection of different display languages, time periods, and the creation of new features to meet a user's needs, along with offering a set of interactive tools and in-map linkages to Pleiades and Pelagios content.</p>
 
-<figure id="figure1">
-<img src="carte_screen.png" height="300px" width="500px" alt="AWMC API image"/>
+<figure id="figure2">
+<img src="figure2.png" alt="Carte image"/>
 </figure>
 
 <p>To further integrate the application with the linked data community, À-la-carte maps can be customized by simply imputing Pleiades IDs into a JSON structure in the URL as demonstrated here:
@@ -68,13 +68,13 @@ http://awmc.unc.edu/awmc/applications/alacarte/?jsonGet={"zoom":"6","center":"lo
 <p>Both the À-la-carte and API projects have been extremely successful, but the center still has a significant amount or work to fully align all of its geographic resources with the larger linked data community. Efforts are now underway to provide appropriate metadata for all rivers, inland water bodies, coastline changes, and other features which have not yet been aligned with Pleiades, a task which has proven to be extremely complex. There is also a need for more descriptive and verbose metadata for existing resources, which will necessitate further refinement of the center's database. The AWMC is also actively looking to simplify the process of accessing accurate background tiles and is exploring the use of MapBox to provide an easily accessible tile server to the wider community, along with a new release of the À-la-carte software to provide an extensible, reusable, and simple framework for the development of further mapping applications. Although the work of the AWMC is far from complete, the impact of linked data has already caused a paradigm shift in the operations of the center, and it is our belief that the simple act of coupling linked data principles with accessible and accurate visualizations of ancient geography will lead to new questions, new approaches, and exciting new developments in ancient world studies.</p>
 </section>
 
-<!--Citations below -->
 <section id="works-cited">
-	<h2>Works Cited</h2>
-	<p><b>Berners- Lee 1998:</b> Berners-Lee, Tim, 1998. “Cool URIs don't change”. Style Guide for online hypertext. Available at: <a href="http://www.w3.org/Provider/Style/URI">http://www.w3.org/Provider/Style/URI</a></p>
-	<p><b>Berners- Lee 2007:</b> Berners-Lee, Tim, 2007. “Linked Data”. W3 Design Issues.  Available at: <a href="http://www.w3.org/DesignIssues/LinkedData.html">http://www.w3.org/DesignIssues/LinkedData.html</a></p>
-	<p><b>Smith and Grove 1872:</b> Smith, William, George Grove, and Karl Müller. <a href="http://www.worldcat.org/oclc/181885336"> An Atlas of Ancient Geography, Biblical and Classical, to Illustrate the Dictionary of the Bible and the Classical Dictionaries, the Biblical Maps from Recent Surveys, and the Classical Maps Drawn by Dr. Charles Müller</a>. London, 1872.</p>
-	<p><b>Talbert and Bagnall 2000:</b> Talbert, Richard J. A and Roger S. Bagnall. <a href="http://www.worldcat.org/oclc/43970336">Barrington Atlas of the Greek and Roman World.</a> Princeton, N.J: Princeton University Press, 2000.</p>
+<h2>Works Cited</h2>
+<p id="work-cited-1" class="work-cited" rel="dcterms:references" typeof="dcterms:BibliographicResource"><span property="dcterms:bibliographicCitation">Berners-Lee, Tim. (1998). “Cool URIs don't change”. Style Guide for online hypertext.</span> Available at <a href="http://www.w3.org/Provider/Style/URI">http://www.w3.org/Provider/Style/URI</a>.</p>
+
+<p id="work-cited-2" class="work-cited" rel="dcterms:references" typeof="dcterms:BibliographicResource"><span property="dcterms:bibliographicCitation"> Berners-Lee, Tim. (2007). “Linked Data”. W3 Design Issues.</span> Available at: <a property="dcterms:URI" href="http://www.w3.org/DesignIssues/LinkedData.html">http://www.w3.org/DesignIssues/LinkedData.html</a></p>
+<p id="work-cited-3" class="work-cited" rel="dcterms:references" typeof="dcterms:BibliographicResource"><span property="dcterms:bibliographicCitation"> Smith, William, George Grove, and Karl Müller. (1872). <i>An Atlas of Ancient Geography, Biblical and Classical, to Illustrate the Dictionary of the Bible and the Classical Dictionaries, the Biblical Maps from Recent Surveys, and the Classical Maps Drawn by Dr. Charles Müller</i>. London.</span> OCLC: <a rel="dcterms:identifier" href="http://www.worldcat.org/oclc/181885336">181885336</a>.</p>
+<p id="work-cited-4" class="work-cited" rel="dcterms:references" typeof="dcterms:BibliographicResource"><span property="dcterms:bibliographicCitation"> Talbert, Richard J. A and Roger S. Bagnall. (2000). <i>Barrington Atlas of the Greek and Roman World.</i> Princeton, N.J: Princeton University Press.</span> OCLC: <a rel="dcterms:identifier" href="http://www.worldcat.org/oclc/43970336">43970336</a>.</p>
 </section>
 <footer>
 <p>©2013 Ryan Horne. Published under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> license.</p>

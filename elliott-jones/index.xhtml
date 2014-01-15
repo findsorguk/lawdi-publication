@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" prefix="dcterms: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
-    <head>
-        <title>Moving the Ancient World Online Forward</title>
-        <link rel="stylesheet" href="../isaw-papers-7.css" />
-        <link rel="dcterms:isPartOf" href="http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/" />
-    </head>
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="dcterms: http://purl.org/dc/terms/
+ foaf: http://xmlns.com/foaf/0.1/
+ rdfs: http://www.w3.org/2000/01/rdf-schema#">
+<head>
+ <title>Moving the Ancient World Online Forward</title>
+ <link rel="stylesheet" href="../isaw-papers-7.css" />
+ <link rel="dcterms:isPartOf" href="http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/" />
+</head>
 
 <body>
 <article>
-<header>
-<h2>ISAW Papers 7.6 (Preprint)</h2>
-<h1 property="dcterms:title">Moving the Ancient World Online Forward</h1>
-<h2><span property="dcterms:creator">Tom Elliott</span> and <span property="dcterms:creator">Chuck Jones</span></h2>
+ <header>
+  <h2>ISAW Papers 7.6 (Preprint)</h2>
+  <h1 property="dcterms:title">Moving the Ancient World Online Forward</h1>
+  <h2><span property="dcterms:creator">Tom Elliott</span> and <span property="dcterms:creator">Chuck Jones</span></h2>
 </header>
 
 <p class="textindent0">From its very beginning it has been the mission of the library of the Institute for the Study of the Ancient World not only to acquire traditional paper-based scholarship but also to develop digital resources as a fundamental component of its collections, integrating the world’s oldest languages, scripts, and cultures with the newest technologies. Under Charles Jones' leadership as ISAW's Head Librarian, it has pursued this agenda in partnership with not only NYU Library's Digital Library Technology Services team, but also ISAW's own Digital Programs department (directed by Tom Elliott), both of which are widely regarded as innovative thought leaders in the fields of digital scholarly publication and preservation.</p>
@@ -25,20 +27,20 @@
 
 <p>The Ancient World Online reaches its audience through a blog<sup><a class="footnote-reference" id="footnote-reference-4" href="#footnote-4">4</a></sup> and via syndication of the news feed from the blog to email and social media outlets. As illustrated in Figure 1, Jones identifies web content suitable for inclusion in AWOL and then copies it manually into the blog via the standard web interface provided by Google's Blogger service, which hosts the blog.<sup><a class="footnote-reference" id="footnote-reference-5" href="#footnote-5">5</a></sup> He edits the blog content as necessary and then publishes it, making it immediately available to AWOL's blog audience over the World-Wide Web. Blogger pushes summary information about each publishing update to Google's Feedburner service,<sup><a class="footnote-reference" id="footnote-reference-6" href="#footnote-6">6</a></sup> which in turn automatically publishes both an update feed (to which users can subscribe using third-party feed reading tools like Feedly.com) and a daily email digest. AWOL has 6,096 current subscribers<sup><a class="footnote-reference" id="footnote-reference-7" href="#footnote-7">7</a></sup> to the daily email syndication of the news feed<sup><a class="footnote-reference" id="footnote-reference-8" href="#footnote-8">8</a></sup>; 277 persons connected to the Facebook syndication of the news feed ; and 585 persons connected to the Twitter syndication of the news feed<sup><a class="footnote-reference" id="footnote-reference-9" href="#footnote-9">9</a></sup>. On the blog page itself in the last six months there have been 184,795 unique visits (=1,200 /day) of which 31,622 are returning visits.</p>
 
-<figure id="figure01">
-<img id="img01" style="max-width:500px" src="figure01.png"/>
+<figure id="figure1">
+<img id="img1" style="max-width:500px" src="figure1.png"/>
 <figcaption>Figure 1.</figcaption>
 </figure>
 
 <p>Our proposed enhancements to AWOL will maintain the core delivery mechanisms via the existing blog and Feedburner, while adding additional publication channels via NYU library systems and OCLC Worldcat,<sup><a class="footnote-reference" id="footnote-reference-10" href="#footnote-10">10</a></sup> as well as ISAW's own website. We will also streamline and improve content capture and preparation through automation and the use of a structured, collaborative web database designed for web and bibliographic citation.</p>
 
-<figure id="figure02">
-<img id="img02" style="max-width:500px" src="figure02.png"/>
+<figure id="figure2">
+<img id="img2" style="max-width:500px" src="figure2.png"/>
 <figcaption>Figure 2.</figcaption>
 </figure>
 
 
-<p>As illustrated in Figure 2, instead of manually copying information about websites into the blog, the editor will use the free, open-source Zotero citation manager<sup><a class="footnote-reference" id="footnote-reference-11" href="#footnote-11">11</a></sup> to capture snapshots of individual web resources and to annotate these with bibliographic information and categorical tags. This data will be automatically synchronized with a free group account on the Zotero server, thereby enabling the editor to involve interested third-party collaborators and the existing ISAW cataloging staff in capturing, refining, and updating data for publication. Zotero server's open Application Programming Interface (API)<sup><a class="footnote-reference" id="footnote-reference-12" href="#footnote-12">12</a></sup> will automatically make the resulting data available in a variety of formats suitable for further use online and in other citation management systems like ProCite and EndNote, thereby creating a new dissemination channel for a broader set of audience use cases (not shown in diagram). One of these Zotero output formats -- an open standard called Bibliontology RDF<sup><a class="footnote-reference" id="footnote-reference-13" href="#footnote-13">13</a></sup> -- will provide the input to two conversion programs ISAW developers will create: one to transform the AWOL bibliographic content into bibliographic data suitable for submission to NYU's library catalog systems and the other to use Blogger's open API<sup><a class="footnote-reference" id="footnote-reference-14" href="#footnote-14">14</a></sup> to post new or updated content to the existing blog without manual intervention. ISAW's website and other digital publications will also take advantage of the Zotero API outputs to incorporate and reuse AWOL content as appropriate.</p>
+<p>As illustrated in Figure 2, instead of manually copying information about websites into the blog, the editor will use the free, open-source Zotero citation manager<sup><a class="footnote-reference" id="footnote-reference-11" href="#footnote-11">11</a></sup> to capture snapshots of individual web resources and to annotate these with bibliographic information and categorical tags. This data will be automatically synchronized with a free group account on the Zotero server, thereby enabling the editor to involve interested third-party collaborators and the existing ISAW cataloging staff in capturing, refining, and updating data for publication. Zotero server's open Application Programming Interface (API)<sup><a class="footnote-reference" id="footnote-reference-12" href="#footnote-12">12</a></sup> will automatically make the resulting data available in a variety of formats suitable for further use online and in other citation management systems like ProCite and EndNote, thereby creating a new dissemination channel for a broader set of audience use cases (not shown in diagram). One of these Zotero output formats – an open standard called Bibliontology RDF<sup><a class="footnote-reference" id="footnote-reference-13" href="#footnote-13">13</a></sup> – will provide the input to two conversion programs ISAW developers will create: one to transform the AWOL bibliographic content into bibliographic data suitable for submission to NYU's library catalog systems and the other to use Blogger's open API<sup><a class="footnote-reference" id="footnote-reference-14" href="#footnote-14">14</a></sup> to post new or updated content to the existing blog without manual intervention. ISAW's website and other digital publications will also take advantage of the Zotero API outputs to incorporate and reuse AWOL content as appropriate.</p>
 
 <section id="footnotes">
 <h2>Notes</h2>

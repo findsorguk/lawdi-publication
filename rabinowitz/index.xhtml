@@ -99,13 +99,15 @@
         an interactive spatial timeline of ancient Mediterranean history and
         archaeology</a> (Rabinowitz 2013). The original design was focused on
       archaeological and art-historical periodization, as a way to explain
-      visually to students how ancient remains were grouped together (Figure 1).<br/>
-      <br/>
-      <img src="figure1.jpg" align="middle" width="500"/><br/>
-      <em>Figure 1. View of Athens in GeoDia: location on map, periodization on
-        timeline, images divided by period on right.</em><br/>
-      <br/>
-      We began with the idea that we would have general, Getty-AAT-style periods
+      visually to students how ancient remains were grouped together (Figure 1).</p>
+
+      <figure id="figure1">
+      <img id="img1" src="figure1.jpg"/>
+      <figcaption>Figure 1. View of Athens in GeoDia: location on map, periodization on
+        timeline, images divided by period on right.</figcaption>
+      </figure>
+
+      <p>We began with the idea that we would have general, Getty-AAT-style periods
       that would then be attached to individual archaeological sites. But major
       problems with this approach soon began to emerge. Using a generic
       periodization meant, in some cases, that sites would be represented with
@@ -119,8 +121,11 @@
       and sites therefore led us to a data-model in which the basic unit was the
       "site period", in most cases a local manifestation, with a site-specific
       date range, of a more general period concept (Figure 2).</p>
-    <p><img src="figure2.jpg" align="middle" width="500"/><br/>
-      <em>Figure 2. The GeoDia period data model.</em></p>
+
+    <figure id="figure2"><img id="img2" src="figure2.jpg"/>
+      <figcaption>Figure 2. The GeoDia period data model.</figcaption>
+      </figure>
+ 
     <p>Because GeoDia, as a synchronized mashup of a map and a timeline, relies
       on places with geographic coordinates, it was relatively easy to join the
       Linked Ancient World Data ecosystem, at least peripherally, by attaching
@@ -173,10 +178,13 @@
       both the terms used to refer to periods and the coordinates used to
       describe them in time and space. In order to follow scholarly practice, it
       should also provide references to the source(s) from which those
-      coordinates were derived. </p>
-    <p><img src="figure3.png" align="middle" width="500"/><br/>
-      <em>Figure 3. Various temporal definitions assigned to the period term or
-        concept "Iron Age" in the Levant, from Kreuger 2013.</em></p>
+      coordinates were derived.</p>
+    
+    <figure id="figure3"><img src="figure3.png" align="middle" width="500"/><br/>
+      <figcaption>Figure 3. Various temporal definitions assigned to the period term or
+        concept "Iron Age" in the Levant, from Kreuger 2013.</figcaption>
+    </figure>
+    
     <p>It would be difficult, if not impossible, to provide a this information
       in a structured form in a top-down gazetteer of period concepts. Ryan
       Shaw, Eric Kansa and I, however, think that we have found a way to provide
@@ -196,12 +204,19 @@
 
         href="http://www.wikidata.org">Wikidata</a>, <a href="http://www.geonames.org">GeoNames</a>,
       etc.); and an authoritative source, also linked to a URI, e.g. from <a href="http://viaf.org/">VIAF</a>,
-      wherever possible (Figures 4 and 5). </p>
-    <p><img src="figure4.png" align="middle" width="500"/><br/>
-      <em>Figure 4. A period assertion according to the PeriodO data model.</em><br/>
-      <img src="figure5.png" align="middle" width="500"/><br/>
-      <em>Figure 5. The same assertion expressed in JSON-LD with dates as Julian
-        Days in scientific notation.</em></p>
+      wherever possible (Figures 4 and 5).</p>
+      
+    <figure id="figure4">
+    <img src="figure4.png"/><br/>
+      <figcaption>Figure 4. A period assertion according to the PeriodO data model.</figcaption>
+    </figure>
+      
+    <figure id="figure5">
+      <img src="figure5.png"/>
+      <figcaption>Figure 5. The same assertion expressed in JSON-LD with dates as Julian
+        Days in scientific notation.</figcaption>
+    </figure>
+        
     <p>We plan to house the repository in Github, at least initially, and to
       mint http DOIs through the <a href="http://n2t.net/ezid">EZID system</a>
       of the California Digital Library. The DOIs will be resolvable to

@@ -6,16 +6,42 @@ body {
  width:70%;
 }
 
+header {
+ margin-top: 2em;
+ margin-bottom:1em;
+}
+
+header > h2 {
+ text-align: center;
+ }
+
+footer {
+ text-indent:0;
+ border-style-top:dotted;
+ margin-top:1em;
+}
+
+footer p {
+ text-indent:0;
+}
+
 #front { 
  margin-top:2em;
  }
 
 p {
- text-indent:2em;
+ text-indent:1em;
  margin:.1em 0 0 0;
  padding:0;
  line-height:1.4em;
+ text-align: justify;
  }
+
+li { text-align: justify }
+
+.author,#author {
+ text-align:center;
+}
  
  .abstract,#abstract {
   margin-left:3em;
@@ -41,6 +67,7 @@ p {
    font-style:italic;
    text-indent:0;
    padding-left:0;
+   margin-top:.5em;
    }
  
    
@@ -90,17 +117,17 @@ p {
    padding:0;
    }
 
- a {
+a {
     border-bottom:thin dotted gray;
     color:black;
     text-decoration:none;
-  }
+}
 
 
- sup {
+sup {
     line-height:0;
     color:black;
-    }
+}
  
     
   
@@ -121,50 +148,35 @@ margin-top:1em;
 p.figure_title {font-family:sans-serif;text-indent:0;font-size:smaller;font-weight:bold;text-align:center;margin-bottom:1em}
 p.figure_caption {font-family:sans-serif;text-indent:0;font-size:smaller; margin-bottom:2em;}
 p.figure > img {max-width:90%}
-	 
-	    .work_cited {
-     margin-left:.25in;
-     text-indent:-.25in
-     }
-     
-     #works_cited a {
-   border-bottom:thin dotted gray;
-   color:gray;
-  }
-  
-   .work_cited_links {
-     color:gray;
-     }
-    
-    .work_cited {
-     margin-left:.25in;
-     text-indent:-.25in
-     }
-     
-   .editorial_note {
-    font-style:italic;
-    margin-top:5px;
-    margin-top:5px;
-    }
 
-
-
-*[xml|lang |= 'grc'] {
-font-family:"New Athena Unicode";
+img {
+ max-width:500px;
 }
-       
-*[xml|lang |= 'egyd'] {
-font-family:Umschrift_TTn;
-}
-       
-    *:lang(grc){font-family:"New Athena Unicode";}
-    *:lang(egyd){font-family:Umschrift_TTn;}
  
-
-*[xml|lang |= 'syr'] {
-   font-family:"Serto Urhoy"; 
-}
-
-xml:lang(syr) {
- font-family:"Serto Urhoy";
+.endnote,.footnote {
+ text-indent:0;
+ margin-top:.3em;
  }
+  
+#works-cited a {
+ border-bottom:thin dotted gray;
+ color:gray;
+ }
+
+.work-cited-links {
+ color:gray;
+ }
+    
+.work-cited {
+  text-align:left;
+  margin-top:.25em;
+  margin-left:.25in;
+  text-indent:-.25in
+  }
+     
+.editorial-note {
+ font-style:italic;
+ margin-top:5px;
+ margin-top:5px;
+ }
+

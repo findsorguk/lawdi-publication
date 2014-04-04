@@ -1,45 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" prefix="dcterms: http://purl.org/dc/terms/
- foaf: http://xmlns.com/foaf/0.1/ 
- nm: http://nomisma.org/id/
- google: http://rdf.data-vocabulary.org/#
- geog: http://www.w3.org/2003/01/geo/wgs84_pos#
- og: http://ogp.me/ns#
- vcard: http://www.w3.org/2001/vcard-rdf/3.0#
- schema: http://schema.org/#
- bibo: http://purl.org/ontology/bibo/"
- xml:lang="en">
- 
-        <link rel="stylesheet" href="../isaw-papers-7.css" />
-        <link rel="dcterms:isPartOf" href="http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:nm="http://nomisma.org/id/"
+      xmlns:google="http://rdf.data-vocabulary.org/#"
+      xmlns:geog="http://www.w3.org/2003/01/geo/wgs84_pos#"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:dct="http://dublincore.org/documents/dcmi-terms/"
+	xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+	xmlns:schema="http://schema.org/#"
+	xmlns:bibo="http://purl.org/ontology/bibo/"
 
-       
+      xml:lang="en">
     <head>
 
-        <title>Linking Portable Antiquities to a Wider Web</title>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+        <meta http-equiv="Content-Language" content="en-GB"/>
+        <meta property="og:title" content="Linking Portable Antiquities to a wider web"/>
+        <title>Linking Portable Antiquities to a wider web</title>
 <link rel="stylesheet" href="../isaw-papers-7.css" />
-        <link rel="dcterms:isPartOf" href="http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/" />
+
     </head>
 
     <body>
-<article>
-<header>
-<h2>ISAW Papers 7.20 (Preprint)</h2>
-        <h1 property="dct:title">Linking Portable Antiquities to a Wider Wseb</h1>
-        <h2 rel="dcterms:creator" typeof="google:person">
-          <a rel="schema:author dcterms:identifier" href="https://plus.google.com/116226960739155950088" property="foaf:name">Daniel E.J. Pett</a>
-        </h2>
-        <!--
-        </span>, <span property="google:title">ICT Advisor</span>, <span property="google:affiliation">Department of Portable Antiquities and Treasure</span>, <span rel="google:address"><span typeof="google:Address"><span property="google:street-address">The British Museum, Great Russell Street</span>, <span property="google:region">London</span>, <span property="google:postal-code">WC1B 3DG</span>, <span property="google:country-name">United Kingdom</span> Email: <a href="mailto:dpett@britishmuseum.org">dpett@britishmuseum.org</a>.</span></span></p>
-<p><span rel="foaf:based_near" typeof="geog:Point">Coordinates: <span class="latitude" property="geog:lat">51.51897</span>, <span class="longitude" property="geog:lon">-0.1265</span></span></p>
-<p>Final draft: <span property="dc:created" content="2013-10-04">4<sup>th</sup> October 2013</span></p>
--->
-</header>
+
+        <h1 property="dct:title">Linking Portable Antiquities to a wider web</h1>
         
 <p>This text is released under a <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 license</a>.</p>
 
-
+<div id="authorDetails" typeof="google:person" about="https://plus.google.com/116226960739155950088">
+<p>Author: <span property="dc:creator google:name" content="Daniel Pett"><a rel="schema:author" href="https://plus.google.com/116226960739155950088">Daniel E.J. Pett</a></span>, <span property="google:title">ICT Advisor</span>, <span property="google:affiliation">Department of Portable Antiquities and Treasure</span>, <span rel="google:address"><span typeof="google:Address"><span property="google:street-address">The British Museum, Great Russell Street</span>, <span property="google:region">London</span>, <span property="google:postal-code">WC1B 3DG</span>, <span property="google:country-name">United Kingdom</span> Email: <a href="mailto:dpett@britishmuseum.org">dpett@britishmuseum.org</a>.</span></span></p>
+<p><span rel="foaf:based_near" typeof="geog:Point">Coordinates: <span class="latitude" property="geog:lat">51.51897</span>, <span class="longitude" property="geog:lon">-0.1265</span></span></p>
+<p>Final draft: <span property="dc:created" content="2013-10-04">4<sup>th</sup> October 2013</span></p>
+</div>
 
  <div id="article" typeof="schema:ScholarlyArticle" rel="article">
        
@@ -51,7 +45,7 @@
 	  
 	<div property="schema:articleBody">
 
-	<section id="section1">
+	<div id="section1">
         <p>The <a href="http://finds.org.uk">Portable Antiquities Scheme</a> (hereafter the <abbr title="Portable Antiquities Scheme">PAS</abbr>) was one of the few projects to attend the <abbr title="Linked Ancient World Data Institute">LAWDI</abbr> events, which did not truly fall under the Classical World umbrella that neatly encompassed many of the other attending projects.  The <abbr title="Portable Antiquities Scheme">PAS</abbr> is a government funded project in the United Kingdom, which promotes the voluntary recording of archaeological objects found by members of the public in England and Wales and administers the Treasure Act process. These objects that are recorded on the <a href="http://finds.org.uk/database">PAS database</a> range from the Prehistoric to Post-Medieval periods (as defined in the <abbr title="the United Kingdom">UK</abbr> by English Heritage) with a large corpus of material that can be attributed to the Roman Empire, of which the majority are coins. Indeed, numismatic material provides the greatest opportunity for the Scheme to link to other resources (or URIs) through their regular attributes such as the mint (geography), era (time), issuer or moneyer (people), place of discovery (geography) and so on.</p>
 
         <p>Since 2003 (Pett 2010a) these data have been placed online within a dynamic database that is updated in real-time, and over 900,000 objects have been recorded with images and extensive metadata (over 200 possible fields, many using controlled and agreed vocabularies) being collected for each. These metadata present an exciting and very practical opportunity for implementing linked data techniques, collaborating with many of the attending projects, and this paper will briefly touch on this.
@@ -63,14 +57,14 @@
 
         <p>Within the site templates structured data has been used for example <a href="http://microformats.org/">microformats</a> (these are now 7 years old as a concept) and <a href="http://www.w3.org/TR/xhtml-rdfa-primer/">rdfa</a> (Herman et al, 2013) are used extensively. For example within HTML contact templates, FOAF standards were implemented (Brickley and Miller 2010). This can be shown in Google’s webmaster tools structured data section in figure 1 below:</p>
 
-        <figure id="figure1">
-            <img id="img1" src="images/figure1.png" width="560" height="532" alt="An example of structured data from Google webmaster tools" typeof="schema:Image" rel="license"  href="http://creativecommons.org/publicdomain/zero/1.0/" about="images/structured.png"/>
-            <figcaption>Figure 1: <span property="dc:title" about="images/structured.png">An example of structured data from the author’s profile page as seen by Google’s webmaster tools.</span></figcaption>
-        </figure>
+        <div id="figure1">
+            <img src="images/structured.png" width="560" height="532" alt="An example of structured data from Google webmaster tools" typeof="schema:Image" rel="license"  href="http://creativecommons.org/publicdomain/zero/1.0/" about="images/structured.png"/>
+            <p>Figure 1: <span property="dc:title" about="images/structured.png">An example of structured data from the author’s profile page as seen by Google’s webmaster tools.</span></p>
+        </div>
 
-	</section>
+	</div>
 
-	<section id="section2">
+	<div id="section2">
         <h2>Post-<abbr title="Linked Ancient World Data Institute">LAWDI</abbr> 2012</h2>
 
         <p>After the 2012 event at <abbr title="Institute for the Study of the Ancient World">ISAW</abbr> (Elliot et al. 2012), efforts were made to bring the <abbr title="Portable Antiquities Scheme">PAS</abbr> into the <a href="http://pelagios-project.blogspot.co.uk">Pelagios family</a>. This was quite a simple task to expedite with expert <a href="https://github.com/pelagios/pelagios-cookbook/wiki">advice</a> available online (Barker, Isaksen and  Simon 2012) and the <abbr title="Portable Antiquities Scheme">PAS</abbr> database already using Pleiades identifiers within its schema. A weekly compiled dump of the ever changing <abbr title="Portable Antiquities Scheme">PAS</abbr> data that had Pleiades IDs (Pett, 2012b) was produced and this was integrated into the Pelagios ecosystem (at present over 80,000 Roman coins records on the <abbr title="Portable Antiquities Scheme">PAS</abbr> database have attributions to Roman mints which have been aligned with Pleiades identifiers, leaving around 90,000 unattributed.) These data were used to great effect in Cayless’ data explorer visualisation that was unveiled to the world at large at LAWDI-2013 (Cayless 2013) with Rome being our highest attribution.</p>
@@ -80,17 +74,17 @@
         <p>Attempts were also made to implement more structured data within HTML templates, for example the use of <a href="http://schema.org">Schema.org</a> and Facebook’s <a href="https://developers.facebook.com/docs/opengraph/">OpenGraph</a> metadata tags. A good example of structured data in action can be seen through the author’s implementation of Twitter cards (Pett 2012), a pretty simple process where meta-tags are added to the head section of an HTML document and this allows the Twitter user-interfaces to parse a concise preview of your content (figure 2 below demonstrates this for the Roman cavalry helmet found with an Iron Age hoard in Leicestershire – <abbr title="Portable Antiquities Scheme">PAS</abbr> record <a href="http://finds.org.uk/database/artefacts/record/id/509553">PAS-984616</a> - (Leins &amp; Hill 2012).</p>
 
         <!-- Start of figure 2 -->
-        <figure id="figure2">
-            <img src="images/figure2.png" width="374" height="532" alt="An example of a twitter card for the Hallaton Helmet" about="images/twitterCard.png" rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" typeof="schema:Image" />
-            <figcaption>Figure 2: <span property="dc:title" about="images/twitterCard.png" >An example of a Twitter card, produced via the parsing of metadata tags applied within mark-up on finds.org.uk templates.</span></figcaption>
-        </figure>
+        <div id="figure2">
+            <img src="images/twitterCard.png" width="374" height="532" alt="An example of a twitter card for the Hallaton Helmet" about="images/twitterCard.png" rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" typeof="schema:Image" />
+            <p>Figure 2: <span property="dc:title" about="images/twitterCard.png" >An example of a Twitter card, produced via the parsing of metadata tags applied within mark-up on finds.org.uk templates.</span></p>
+        </div>
         <!-- End of figure 2 -->
 
         <p>Concerted efforts were also made to try and bring the authority lists used for recording coins to external authority lists, and to achieve this, the author used OpenRefine to reconcile terms against VIAF (see Page 2013 for details on how to do this) and dbPedia. Some of the results of this can be seen in Elliot’s "<a href="http://www.paregorios.org/resources/roman-emperors/">About Roman Emperors</a>" project (2013) and also within the templates used in the <abbr title="Portable Antiquities Scheme">PAS</abbr> website numismatic guides and this process of enhancement is ongoing.</p>
 
-	</section>
+	</div>
 
-	<section id="section3">
+	<div id="section3">
 
         <h2>Post LAWDI 2013 – production and consumption of linked data.</h2>
 
@@ -117,14 +111,14 @@
 
         <p>One caveat that the <abbr title="Portable Antiquities Scheme">PAS</abbr> website has shown to ingesting these data is the reliance on uptime of the other resources – dbPedia is frequently slow or down and this can have, and Pleiades has a period of instability which have significant impact on enriched resources.</p>
 
-	</section>
+	</div>
 
-	<section id="section4">
+	<div id="section4">
 
         <h2>Where does the road lead now?</h2>
         <p>Following on from LAWDI 2012 and 2013, it is intended to develop the LOD capabilities of the <abbr title="Portable Antiquities Scheme">PAS</abbr> further. Work is presently underway to enable a SPARQL endpoint to a self-hosted triple store through a choice of software currently being evaluated: Apache Marmotta and Fuseki (which has been used to good effect by Gruber (2013)) which is hoped will allow <abbr title="Portable Antiquities Scheme">PAS</abbr> data to be used in more applications within the LAWDI family. Beyond this initial audience, there is also the possibility of feeding into the Mellon funded Research Space initiative and to provide data for other LOD projects.</p>
         <p>It is also hoped that it will be possible to modify the Zend Framework based <abbr title="Portable Antiquities Scheme">PAS</abbr> system to allow for full content negotiation and ideally, removal of the ‘Share-Alike’ Creative Commons licence and replacement with a simple CC-BY version Work will also continue to increase the amount of structured data available via the xhtml+rdfa pages of the website and database and further resources to link to will be sought out and partnerships forged. With good fortune and some extra human resources in the offing, it is hoped that the <abbr title="Portable Antiquities Scheme">PAS</abbr> might reach the 5 stars level by quarter one of 2014. Funding has been forthcoming from the Arts and Humanites Research Council (<abbr title="Arts and Humanities Research Council">AHRC</abbr>) for two projects that will deal with the production and consumption of linked data - one <a href="http://micropasts.org">project</a> (looking at crowd-sourcing, crowd-funding and 3D visualisation) with <abbr title="University College London">UCL</abbr> (£318,000) and a visualisation project with Tracemedia (£5,000). The results of these will be published in print and online during 2014 and the first quarter of 2015.</p>
-	</section>
+	</div>
 
 </div>
 
@@ -209,6 +203,6 @@
   <span property="dct:title">Linking Portable Antiquities to a wider web</span>. This work is published from: <span property="vcard:Country" datatype="dct:ISO3166" content="GB" about="http://finds.org.uk">
   United Kingdom</span>.</p>
 </div>
-</article>
+
     </body>
 </html>
